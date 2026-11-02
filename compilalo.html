@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Compílalo tú · VeriFree Facturación</title>
+<meta name="description" content="Cómo compilar VeriFree a partir de su código público y qué supone ser tu propio productor ante Hacienda.">
+<meta property="og:title" content="Compílalo tú · VeriFree Facturación">
+<meta property="og:description" content="Cómo compilar VeriFree a partir de su código público y qué supone ser tu propio productor ante Hacienda.">
+<meta property="og:image" content="https://verifree.es/icono.png">
+<meta property="og:url" content="https://verifree.es/compilalo.html">
+<link rel="canonical" href="https://verifree.es/compilalo.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="icono.svg">
+<link rel="alternate icon" type="image/png" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
+<link rel="preload" href="fuentes/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marco">
+    <a class="marca" href="./">
+      <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
+      VeriFree <span>Facturación</span>
+    </a>
+    <nav class="menu" id="menu-principal" aria-label="Navegación principal">
+      <a href="caracteristicas.html">Características</a>
+      <a href="precios.html">Precios</a>
+      <a href="garantia.html">Garantía</a>
+      <a href="nosotros.html">Nosotros</a>
+      <div class="menu-grupo">
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-ayuda">Ayuda</button>
+        <div class="submenu" id="submenu-ayuda">
+          <a href="preguntas.html">Preguntas</a>
+          <a href="manual.html">Manual</a>
+          <a href="descargas.html">Descargas</a>
+        </div>
+      </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="cabecera-acciones">
+      <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/cmorillas/verifree-web/releases/latest/download/VeriFree.exe" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Probar gratis
+      </a>
+      <button type="button" class="btn-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span class="linea-hamb"></span>
+        <span class="linea-hamb"></span>
+        <span class="linea-hamb"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="pagina-cabecera">
+    <div class="marco">
+      <a class="volver" href="./">← Volver al inicio</a>
+      <h1>Compílalo tú y sé tu propio productor</h1>
+      <p>Si tienes algo de soltura técnica, puedes tener VeriFree gratis. Te contamos cómo, y también lo que implica.</p>
+    </div>
+  </section>
+  <section class="seccion seccion-pagina">
+    <div class="marco">
+      <article class="texto texto-pagina">
+        <a class="veri veri-izq" href="https://wa.me/34686600299?text=Hola%2C%20quiero%20consultar%20sobre%20VeriFree" target="_blank" rel="noopener" title="Escríbenos por WhatsApp"><img src="mascota/veri.svg" alt="" width="96" height="96"><p class="veri-bocadillo">Es más fácil de lo que parece. Y si te atascas, la Licencia Oficial sigue ahí.</p></a>
+        <h2>Antes de empezar: lo que implica</h2>
+        <p>El Reglamento VERI*FACTU (RD 1007/2023, art. 13) exige que cada programa tenga un <strong>productor</strong>: quien compila VeriFree con sus datos es el productor de su copia. Eso significa que:</p>
+        <ul>
+          <li>Tu NIF o CIF y tu nombre o razón social irán en cada registro que se envía a la AEAT como productor del software, y la AEAT comprobará que ese NIF o CIF esté en su censo.</li>
+          <li>Tienes que emitir tu propia <strong>declaración responsable</strong>, que certifica que el programa cumple la ley (LGT, art. 29.2.j) y el Reglamento.</li>
+          <li>Eres responsable de lo que compilas: si modificas el código, respondes de esos cambios.</li>
+        </ul>
+        <p class="aviso">La licencia es de uso propio: puedes usarlo para la facturación de tu actividad y de tus empresas, pero no para facturar a nombre de otros, revenderlo, distribuirlo a terceros ni cobrar por dar soporte.</p>
+        <h2>Qué necesitas</h2>
+        <ul>
+          <li>Un ordenador con Windows 10 u 11.</li>
+          <li>El SDK de .NET 10, gratuito, de Microsoft.</li>
+          <li>Git, o simplemente descargar el código en ZIP desde GitHub.</li>
+          <li>Tu certificado digital instalado en Windows para enviar a la AEAT.</li>
+        </ul>
+        <h2>Paso a paso</h2>
+        <ol>
+          <li><strong>Descarga el código</strong> desde <a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">GitHub</a>.</li>
+          <li><strong>Pon tus datos de productor.</strong> El código no trae ningún productor y, sin uno, no se compila: así nadie obtiene el programa sin decidir antes quién responde de él. Crea un archivo <span class="ruta">Productor.json</span> fuera de la carpeta del código con tu NIF o CIF, tu nombre o razón social, tu dirección y tu localidad. El README del código explica qué lleva cada dato. Así tus datos nunca acaban en el código por descuido.</li>
+          <li><strong>Compílalo</strong> con el SDK de .NET 10, indicando dónde está tu copia: <code>dotnet publish src\VeriFree.Escritorio -c Release -o dist -p:ArchivoProductor="C:\ruta\Productor.json"</code>. Obtendrás tu propio <span class="ruta">VeriFree.exe</span> en la carpeta <span class="ruta">dist</span>.</li>
+          <li><strong>Guarda y firma tu declaración responsable:</strong> en Acerca de, «Ver la declaración responsable» te la da hecha con tus datos; guárdala en PDF, fírmala y consérvala.</li>
+          <li><strong>Empieza a facturar.</strong> Tu empresa empieza en el modo de pruebas; cuando quieras facturar de verdad, activa VERI*FACTU en Configuración. Todo funciona igual que en la versión oficial. «Buscar actualizaciones» solo aparece si en tu <span class="ruta">Productor.json</span> pones la dirección donde anuncias tus versiones (lo explica el README); si no, las versiones nuevas las compilas tú.</li>
+        </ol>
+        <h2>¿Y si prefiero no complicarme?</h2>
+        <p>Es totalmente comprensible. Con la <a href="precios.html">Licencia Oficial (119 € + IVA)</a>, nuestra empresa asume formalmente la condición y responsabilidad legal de productor ante la AEAT (VeriFree, S.L.), dispones del ejecutable oficial firmado y cuentas con soporte técnico directo.</p>
+        <h2>Comunidad y colaboración</h2>
+        <p>Si compilas VeriFree y te resulta una herramienta útil en tu actividad, puedes colaborar notificando incidencias en GitHub, proponiendo mejoras o recomendando el programa a otros profesionales y asesorías que busquen una alternativa sin cuotas periódicas.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="marco">
+    <div class="pie-rejilla">
+      <div class="pie-col">
+        <div class="marca">
+          <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
+          VeriFree <span>Facturación</span>
+        </div>
+        <p>Software de facturación para Windows adaptado al Reglamento VERI*FACTU. Con el código público, para que cualquiera pueda comprobar qué hace.</p>
+      </div>
+
+      <div class="pie-col">
+        <h5>Navegación</h5>
+        <ul class="pie-enlaces">
+          <li><a href="caracteristicas.html">Características</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="garantia.html">Garantía legal</a></li>
+          <li><a href="preguntas.html">Preguntas</a></li>
+          <li><a href="manual.html">Manual de uso</a></li>
+          <li><a href="descargas.html">Descargas</a></li>
+          <li><a href="compilalo.html">Compílalo tú</a></li>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código en GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="pie-col">
+        <h5>Sede y titularidad legal</h5>
+        <ul class="pie-contacto">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 21V3h6v18"/></svg>
+            <span><strong>VeriFree, S.L.</strong></span>
+          </li>
+          <li class="pie-cif">
+            <span></span>
+            <span>NIF B05821780 · Inscrita en el Registro Mercantil de Alicante, hoja A-208993, inscripción 1.ª</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>C/ Reyes Católicos, 24, 1º Izq. · 03003 Alicante</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Tel. <a href="tel:965134033">965 13 40 33</a> · <a href="tel:686600299">686 60 02 99</a></span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:contacto@verifree.es">contacto@verifree.es</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pie-legal">
+      <span>© 2026 VeriFree, S.L. Todos los derechos reservados. Información general en cumplimiento del art. 10 de la Ley 34/2002 (LSSI-CE).</span>
+      <span>Web 100% privada: libre de cookies de terceros y libre de rastreo. <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="verifree.js" defer></script>
+</body>
+</html>

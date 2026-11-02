@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VeriFree Facturación - Software VERI*FACTU y factura electrónica en tu PC</title>
+<meta name="description" content="VeriFree Facturación: programa para Windows que envía tus facturas a Hacienda (VERI*FACTU) y prepara la factura electrónica. Pagas una vez, tus datos en tu ordenador y código público.">
+<meta property="og:title" content="VeriFree Facturación - Software VERI*FACTU y factura electrónica en tu PC">
+<meta property="og:description" content="VeriFree Facturación: programa para Windows que envía tus facturas a Hacienda (VERI*FACTU) y prepara la factura electrónica. Pagas una vez, tus datos en tu ordenador y código público.">
+<meta property="og:image" content="https://verifree.es/icono.png">
+<meta property="og:url" content="https://verifree.es/">
+<link rel="canonical" href="https://verifree.es/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="icono.svg">
+<link rel="alternate icon" type="image/png" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
+<link rel="preload" href="fuentes/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marco">
+    <a class="marca" href="./">
+      <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
+      VeriFree <span>Facturación</span>
+    </a>
+    <nav class="menu" id="menu-principal" aria-label="Navegación principal">
+      <a href="caracteristicas.html">Características</a>
+      <a href="precios.html">Precios</a>
+      <a href="garantia.html">Garantía</a>
+      <a href="nosotros.html">Nosotros</a>
+      <div class="menu-grupo">
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-ayuda">Ayuda</button>
+        <div class="submenu" id="submenu-ayuda">
+          <a href="preguntas.html">Preguntas</a>
+          <a href="manual.html">Manual</a>
+          <a href="descargas.html">Descargas</a>
+        </div>
+      </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="cabecera-acciones">
+      <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/cmorillas/verifree-web/releases/latest/download/VeriFree.exe" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Probar gratis
+      </a>
+      <button type="button" class="btn-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span class="linea-hamb"></span>
+        <span class="linea-hamb"></span>
+        <span class="linea-hamb"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Portada -->
+  <section class="portada">
+    <div class="cinta-esquina"><a class="cinta" href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener" aria-label="Código público en GitHub, con espíritu de software libre"><strong><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>Código público</strong><span>con espíritu de software libre</span></a></div>
+    <div class="marco">
+      <div class="portada-texto">
+        <h1>Facturación <span class="destacado">VERI*FACTU</span> en tu PC:<br class="corte"> pagas una vez y es tuya para siempre</h1>
+        <p class="subtitulo">
+          Haces la factura, VeriFree se la manda a Hacienda y todo se queda en tu ordenador: sin nube, sin límite de facturas y para todas tus empresas.
+        </p>
+
+        <a class="veri veri-portada" href="https://wa.me/34686600299?text=Hola%2C%20quiero%20consultar%20sobre%20VeriFree" target="_blank" rel="noopener" title="Escríbenos por WhatsApp"><img src="mascota/veri.svg" alt="" width="96" height="96"><p class="veri-bocadillo">¡Hola! Soy <strong>Veri</strong>. Te ayudo a facturar sin líos con Hacienda.</p></a>
+        <div class="acciones">
+          <a class="btn btn-primario" href="https://github.com/cmorillas/verifree-web/releases/latest/download/VeriFree.exe" download>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Descargar gratis</span>
+          </a>
+          <a class="btn btn-secundario btn-flecha" href="precios.html">
+            <span>Ver planes y licencias</span>
+            <svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <p class="nota">
+          Un solo archivo para Windows (71 MB): lo descargas y lo pruebas entero en el modo de pruebas. Sin instalar nada, sin registrarte y sin tarjeta.
+        </p>
+        <p class="nota">
+          <a href="descargas.html">Requisitos, verificación del ejecutable y código fuente</a>
+        </p>
+      </div>
+
+      <!-- Captura real del programa -->
+      <figure class="escenario">
+        <img src="capturas/facturas.png" alt="VeriFree: lista de facturas con los totales del mes y el estado de envío a la AEAT" width="1920" height="1140">
+        <div class="flotante flotante-izq" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><strong>Nadie puede tocarlas</strong><span>Cada factura, encadenada a la anterior</span></div>
+        <div class="flotante flotante-der" aria-hidden="true"><img src="capturas/factura-pdf.png" alt="" width="992" height="780"><strong>Código QR oficial de cotejo</strong></div>
+
+      </figure>
+    </div>
+  </section>
+
+  <!-- Por qué hacemos VeriFree -->
+  <section class="seccion seccion-mision" id="mision">
+    <div class="marco">
+      <div class="manifiesto">
+        <h2>Por qué hacemos VeriFree</h2>
+        <p>Con VERI*FACTU, casi todo el que factura va a necesitar un programa adaptado, y lo habitual es pagar una cuota cada mes, para siempre. Creemos que cumplir con Hacienda no debería convertirse en un alquiler de por vida. Por eso VeriFree se paga una vez, tus datos se quedan en tu ordenador y su código es público.</p>
+        <div class="seguir"><a class="btn btn-secundario btn-flecha" href="nosotros.html#por-que"><span>Nuestra filosofía</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Funciones: resumen; todas, con sus capturas, en caracteristicas.html -->
+  <section class="seccion" id="funciones">
+    <div class="marco">
+      <header class="seccion-cabecera">
+        <h2>Todo lo que exige la ley, sin complicaciones</h2>
+        <p>Sea cual sea tu negocio, VeriFree se encarga de VERI*FACTU y te da cada factura también como factura electrónica. Tú solo facturas.</p>
+      </header>
+
+      <div class="resumen">
+        <article class="resumen-tarjeta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          <h3>Remisión automática a la AEAT</h3>
+          <p>Emites la factura y VeriFree la envía sola a Hacienda, encadenada a la anterior para que nadie pueda tocarla.</p>
+        </article>
+        <article class="resumen-tarjeta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 13h6M9 17h4"/></svg>
+          <h3>Factura electrónica</h3>
+          <p>Cada factura sale también como factura electrónica firmada, en UBL, el estándar europeo.</p>
+        </article>
+        <article class="resumen-tarjeta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h8M8 17h5"/></svg>
+          <h3>Presupuestos y proformas</h3>
+          <p>Con su número y su validez. Si el cliente acepta, se convierten en factura con un clic.</p>
+        </article>
+        <article class="resumen-tarjeta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          <h3>Facturas recurrentes</h3>
+          <p>Las que se repiten cada semana, mes, trimestre o año: las emites juntas cuando quieres, con el periodo puesto solo.</p>
+        </article>
+        <article class="resumen-tarjeta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/><path d="M5 15h4"/></svg>
+          <h3>Remesas SEPA</h3>
+          <p>El fichero de adeudos para tu banco con las facturas domiciliadas, y la orden de domiciliación para que la firme cada cliente.</p>
+        </article>
+        <article class="resumen-tarjeta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+          <h3>Libro registro en Excel</h3>
+          <p>Un clic y tu asesoría tiene el libro de facturas expedidas en el formato de la AEAT.</p>
+        </article>
+      </div>
+
+      <div class="seguir"><a class="btn btn-secundario btn-flecha" href="caracteristicas.html"><span>Ver todas las características</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+  </section>
+
+  <!-- Por qué puedes fiarte -->
+  <section class="seccion codigo" id="ventajas">
+    <div class="marco">
+      <header class="seccion-cabecera">
+        <h2>Por qué puedes fiarte de VeriFree</h2>
+        <p>Es normal desconfiar de un programa nuevo cuando lo que está en juego es Hacienda. Por eso no te pedimos que nos creas: te damos la forma de comprobarlo.</p>
+      </header>
+
+      <div class="codigo-rejilla">
+        <div class="codigo-bloque">
+          <h3>Compruébalo tú en la AEAT</h3>
+          <p>Cada factura lleva el código QR de la Agencia Tributaria: lo escaneas con el móvil y la web de la AEAT te dice si está registrada. VeriFree se la envía al emitirla, desde tu ordenador y con tu certificado. (En el modo de pruebas no se puede, porque no envía nada.)</p>
+        </div>
+
+        <div class="codigo-bloque">
+          <h3>Si el programa no cumple, responde su productor</h3>
+          <p>La ley sanciona a quien usa un programa sin la declaración responsable de su productor, o modificado (LGT, art. 201 bis). La Licencia Oficial la lleva, firmada por nosotros: tú te ocupas de facturar y que el programa cumpla es cosa nuestra.</p>
+          <div class="acciones">
+            <a class="btn btn-secundario btn-flecha" href="garantia.html"><span>Ver la garantía legal</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+
+        <div class="codigo-bloque">
+          <h3>Tus datos, siempre tuyos</h3>
+          <p>Tus facturas están en tu ordenador, no en servidores nuestros. Además, cada una se archiva como factura electrónica firmada, en un formato europeo que leen otros programas, en la carpeta que elijas (también en Google Drive u OneDrive). Pase lo que pase, tu historial es tuyo.</p>
+        </div>
+
+        <div class="codigo-bloque">
+          <h3>Código público: nadie tiene que creernos</h3>
+          <p>Un programa que maneja tus facturas no debe tener secretos. Por eso su código es público: un asesor, un perito o un inspector puede comprobar qué hace y que no permite cajas B ni tocar las facturas emitidas. Y cada ejecutable oficial lo lleva dentro, comentarios incluidos: lo que se revisa es exactamente lo que se ejecuta.</p>
+          <div class="acciones">
+            <a class="btn btn-secundario btn-flecha" href="nosotros.html#codigo-publico"><span>Nuestra filosofía</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Precios: resumen; los planes completos, en precios.html -->
+  <section class="seccion" id="precios">
+    <div class="marco">
+      <header class="seccion-cabecera">
+        <h2>Pagas una vez. Sin cuotas de por vida</h2>
+        <p>Lo normal es pagar entre 130 € y 580 € al año, todos los años. Con VeriFree, <strong>119 € + IVA una vez</strong>, con el primer año de actualizaciones incluido. Si no renuevas, tu programa sigue funcionando.</p>
+      </header>
+
+      <div class="resumen resumen-dos">
+        <article class="resumen-tarjeta resumen-destacada">
+          <h3>Licencia Oficial</h3>
+          <p class="resumen-cifra">119 € <span>+ IVA, un solo pago</span></p>
+          <p>El programa listo para facturar, con nuestra garantía de productor y el primer año de actualizaciones y soporte.</p>
+        </article>
+        <article class="resumen-tarjeta">
+          <h3>Productor Propio</h3>
+          <p class="resumen-cifra">0 €</p>
+          <p>Para quien sabe programar, sea un profesional, una empresa o una asociación, y asume ser su productor ante Hacienda.</p>
+        </article>
+      </div>
+
+      <div class="seguir">
+        <a class="btn btn-secundario btn-flecha" href="precios.html"><span>Ver precios y licencias</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-secundario btn-flecha" href="caracteristicas.html#comparativa"><span>Ver cómo se compara</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas frecuentes -->
+  <section class="seccion" id="faq">
+    <div class="marco faq">
+      <header class="seccion-cabecera">
+        <h2>Preguntas frecuentes</h2>
+        <p>Lo que más nos preguntan, contado claro.</p>
+        <a class="veri veri-izq" href="https://wa.me/34686600299?text=Hola%2C%20quiero%20consultar%20sobre%20VeriFree" target="_blank" rel="noopener" title="Escríbenos por WhatsApp"><img src="mascota/veri.svg" alt="" width="96" height="96"><p class="veri-bocadillo">¿Te queda alguna duda? Escríbeme por WhatsApp y te lo contamos.</p></a>
+      </header>
+
+      <div class="faq-lista">
+        <details class="faq-item">
+          <summary>
+            <span>¿Puedo probar el programa antes de comprar la Licencia Oficial?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Sí. Descarga VeriFree desde esta web, sin registrarte ni dar datos de pago. Es el programa completo en modo de pruebas, sin límite de tiempo: puedes crear clientes, hacer facturas, ver el PDF con su QR y sacar el libro en Excel. Las facturas de prueba llevan su propia numeración («PRU-») y no se envían a Hacienda. Los presupuestos y las proformas, en cambio, son de verdad: puedes mandarlos a tus clientes. Para facturar de verdad necesitas la Licencia Oficial.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>Ya utilizo otro programa de facturación, ¿puedo pasarme a VeriFree a mitad de año?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            <strong>Sí, en cualquier momento.</strong> Tus facturas antiguas se quedan en tu programa anterior: solo hay que conservarlas. Tus clientes los traes de golpe desde el Excel o el CSV que exporte ese programa, y empiezas una serie nueva (por ejemplo, la B), para no repetir números de tu programa anterior. Tu primera factura con VeriFree se comunica a Hacienda como el inicio de tu nuevo sistema, tal como prevé la AEAT.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿VeriFree sirve para registrar facturas de gastos o llevar la contabilidad?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            <strong>No, a propósito.</strong> VeriFree se dedica a lo que vendes: presupuestos, facturas, cobros por el banco y lo que pide Hacienda. Los gastos y la contabilidad los lleva tu asesoría, y le pasas el libro de ventas en Excel con un clic.
+          </div>
+        </details>
+        <div class="seguir"><a class="btn btn-secundario btn-flecha" href="preguntas.html"><span>Ver todas las preguntas</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section class="cierre">
+    <div class="marco">
+      <h2>Empieza a facturar con la tranquilidad de cumplir la ley</h2>
+      <div class="cierre-lateral">
+        <p>Pruébalo gratis en tu ordenador. Y si nos necesitas, al otro lado del teléfono hay gente de verdad.</p>
+        <div class="acciones">
+          <a class="btn btn-primario" href="https://github.com/cmorillas/verifree-web/releases/latest/download/VeriFree.exe" download>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Descargar gratis</span>
+          </a>
+          <a class="btn btn-secundario btn-flecha" href="precios.html"><span>Ver planes y licencias</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-secundario btn-flecha" href="manual.html"><span>Consultar el manual</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="marco">
+    <div class="pie-rejilla">
+      <div class="pie-col">
+        <div class="marca">
+          <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
+          VeriFree <span>Facturación</span>
+        </div>
+        <p>Software de facturación para Windows adaptado al Reglamento VERI*FACTU. Con el código público, para que cualquiera pueda comprobar qué hace.</p>
+      </div>
+
+      <div class="pie-col">
+        <h5>Navegación</h5>
+        <ul class="pie-enlaces">
+          <li><a href="caracteristicas.html">Características</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="garantia.html">Garantía legal</a></li>
+          <li><a href="preguntas.html">Preguntas</a></li>
+          <li><a href="manual.html">Manual de uso</a></li>
+          <li><a href="descargas.html">Descargas</a></li>
+          <li><a href="compilalo.html">Compílalo tú</a></li>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código en GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="pie-col">
+        <h5>Sede y titularidad legal</h5>
+        <ul class="pie-contacto">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 21V3h6v18"/></svg>
+            <span><strong>VeriFree, S.L.</strong></span>
+          </li>
+          <li class="pie-cif">
+            <span></span>
+            <span>NIF B05821780 · Inscrita en el Registro Mercantil de Alicante, hoja A-208993, inscripción 1.ª</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>C/ Reyes Católicos, 24, 1º Izq. · 03003 Alicante</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Tel. <a href="tel:965134033">965 13 40 33</a> · <a href="tel:686600299">686 60 02 99</a></span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:contacto@verifree.es">contacto@verifree.es</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pie-legal">
+      <span>© 2026 VeriFree, S.L. Todos los derechos reservados. Información general en cumplimiento del art. 10 de la Ley 34/2002 (LSSI-CE).</span>
+      <span>Web 100% privada: libre de cookies de terceros y libre de rastreo. <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="verifree.js" defer></script>
+</body>
+</html>

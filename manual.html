@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manual de uso · VeriFree Facturación</title>
+<meta name="description" content="Manual de VeriFree Facturación: primeros pasos, empresas, clientes, presupuestos, facturas, envío a la AEAT, remesas y copias de seguridad.">
+<meta property="og:title" content="Manual de uso · VeriFree Facturación">
+<meta property="og:description" content="Manual de VeriFree Facturación: primeros pasos, empresas, clientes, presupuestos, facturas, envío a la AEAT, remesas y copias de seguridad.">
+<meta property="og:image" content="https://verifree.es/icono.png">
+<meta property="og:url" content="https://verifree.es/manual.html">
+<link rel="canonical" href="https://verifree.es/manual.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" type="image/svg+xml" href="icono.svg">
+<link rel="alternate icon" type="image/png" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="preload" href="fuentes/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marco">
+    <a class="marca" href="./">
+      <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
+      VeriFree <span>Facturación</span>
+    </a>
+    <nav class="menu" id="menu-principal" aria-label="Navegación principal">
+      <a href="caracteristicas.html">Características</a>
+      <a href="precios.html">Precios</a>
+      <a href="garantia.html">Garantía</a>
+      <a href="nosotros.html">Nosotros</a>
+      <div class="menu-grupo actual">
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-ayuda">Ayuda</button>
+        <div class="submenu" id="submenu-ayuda">
+          <a href="preguntas.html">Preguntas</a>
+          <a href="manual.html" aria-current="page">Manual</a>
+          <a href="descargas.html">Descargas</a>
+        </div>
+      </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="cabecera-acciones">
+      <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/cmorillas/verifree-web/releases/latest/download/VeriFree.exe" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Probar gratis
+      </a>
+      <button type="button" class="btn-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span class="linea-hamb"></span>
+        <span class="linea-hamb"></span>
+        <span class="linea-hamb"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="manual">
+  <div class="marco">
+    <nav class="indice" aria-label="Índice del manual">
+      <p>Índice</p>
+      <ol>
+        <li><a href="#instalar">Instalar</a></li>
+        <li><a href="#empresa">Crear la empresa</a></li>
+        <li><a href="#configuracion">Configuración</a></li>
+        <li><a href="#borradores">Hacer una factura</a></li>
+        <li><a href="#presupuestos">Presupuestos y proformas</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#facturas">Facturas emitidas</a></li>
+        <li><a href="#email">Enviar por email</a></li>
+        <li><a href="#aeat">Envío a la AEAT</a></li>
+        <li><a href="#electronica">Factura electrónica</a></li>
+        <li><a href="#libro">Libro registro</a></li>
+        <li><a href="#recurrentes">Facturas recurrentes</a></li>
+        <li><a href="#remesas">Remesas SEPA</a></li>
+        <li><a href="#copias">Copias de seguridad</a></li>
+      </ol>
+    </nav>
+
+    <article class="texto">
+      <h1>Manual de usuario</h1>
+      <p class="intro">Todo lo necesario para empezar a facturar con VeriFree, en el orden en que lo vas a necesitar.</p>
+
+      <section id="instalar">
+        <h2>1. Instalar</h2>
+        <p>VeriFree es un único archivo portátil, <span class="ruta">VeriFree.exe</span>, que no requiere instalación previa ni permisos especiales (puedes <a href="https://github.com/cmorillas/verifree-web/releases/latest/download/VeriFree.exe" download>descargarlo aquí</a> o usar tu ejecutable oficial con licencia). Funciona en Windows 10 u 11 de 64 bits y lleva dentro todo lo que necesita. Para empezar a usarlo:</p>
+        <ol>
+          <li>Guarda <span class="ruta">VeriFree.exe</span> en una carpeta tuya, por ejemplo en <span class="ruta">Documentos\VeriFree</span>.</li>
+          <li>Ábrelo desde esa carpeta con doble clic. Si Windows SmartScreen muestra un aviso, pulsa <strong>Más información</strong> y después <strong>Ejecutar de todas formas</strong>.</li>
+        </ol>
+        <p class="aviso">Si lo abres directamente desde un ZIP o desde un correo, el programa te avisa y no sigue: Windows lo ejecutaría desde una carpeta temporal y los datos se perderían.</p>
+        <p>Los datos se guardan junto al programa, en la carpeta <span class="ruta">Empresas</span>, una carpeta por empresa. Mejor en una carpeta de este equipo: si está en una carpeta de red o en una que sincroniza OneDrive, Dropbox o Google Drive, el programa te avisa, porque los datos podrían dañarse. A la nube, lleva solo las copias de seguridad.</p>
+        <h3>Comprobación de integridad (SHA-256)</h3>
+        <p>Para comprobar que el ejecutable descargado no ha sufrido alteraciones y coincide con el publicado, puedes verificar su huella digital en PowerShell:</p>
+        <p><code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></p>
+        <p>La huella SHA-256 oficial de la versión 0.0.1, la que hay en la web, es:<br><code class="huella-valor">48A3FC4799BC4B1364846535BE33CD9F2BB173ED88C575CF2C24D07BD84E984B</code></p>
+        <h3>Cómo actualizar a una nueva versión</h3>
+        <p>En <strong>Acerca de</strong>, <strong>Buscar actualizaciones</strong> consulta si hay una versión nueva, sin enviar ningún dato tuyo. Si la hay, te dice qué trae y la instala: antes guarda una copia de tus datos y después vuelve a abrir el programa con la versión nueva. Si tu licencia no cubre esa versión, te ofrece renovarla.</p>
+        <p>También puedes hacerlo a mano: cierra VeriFree y sustituye <span class="ruta">VeriFree.exe</span> por el de la versión nueva. No borres la carpeta <span class="ruta">Empresas</span>: ahí están tus empresas, sus facturas, su configuración y tus licencias, y el programa pone al día sus datos al abrirse. La versión que tienes se ve en <strong>Acerca de</strong>.</p>
+      </section>
+
+      <section id="empresa">
+        <h2>2. Crear la empresa</h2>
+        <p>La primera vez, el programa pide los datos fiscales de la empresa: el NIF, el nombre (o el nombre y los apellidos, si eres persona física) y el domicilio (dirección, código postal, población, provincia y país). Debajo, si quieres, el IBAN, que se imprime en las facturas por transferencia, y el móvil de Bizum, que se imprime en las facturas por Bizum. Pulsa <strong>Crear la empresa</strong> y ya puedes facturar.</p>
+        <p>Toda empresa empieza en el modo de pruebas, y arriba se ve la etiqueta <strong>PRUEBAS</strong>: puedes probarlo todo con tus datos, y las facturas llevan su propia numeración, con «PRU-» delante, y no tienen validez. Cuando quieras facturar de verdad, activa VERI*FACTU (ver <a href="#produccion">Activar VERI*FACTU</a>).</p>
+        <h3>Varias empresas</h3>
+        <p>Arriba a la izquierda está el nombre de la empresa abierta. Púlsalo para cambiar a otra o elige <strong>Crear una empresa nueva…</strong>. Cada empresa tiene sus facturas, sus clientes, su numeración y su configuración por separado, empieza en el modo de pruebas y activa VERI*FACTU por su cuenta.</p>
+      </section>
+
+      <section id="configuracion">
+        <h2>3. Configuración</h2>
+        <p>En <strong>Configuración</strong> hay una pestaña para cada cosa. <strong>Guardar cambios</strong> guarda lo escrito en Empresa, Facturas y Email; si cambias de pestaña o cierras el programa con cambios sin guardar, te pregunta si quieres guardarlos. Lo de Series, VERI*FACTU y Factura electrónica se guarda al momento.</p>
+        <dl>
+          <dt>Empresa</dt>
+          <dd>Los datos fiscales, que se copian en cada factura al emitirla; la cuenta (IBAN) y el móvil de Bizum, que se imprimen en las facturas por transferencia y por Bizum; y la actividad económica, para el libro registro.</dd>
+          <dt>Facturas</dt>
+          <dd>El aspecto de facturas y presupuestos: el logo y el texto al pie (por ejemplo, la inscripción en el Registro Mercantil o el aviso de protección de datos); <strong>Ver cómo quedan</strong> enseña una muestra. Y con qué empieza cada borrador nuevo: el IVA de los conceptos, la forma de pago, la serie y la retención.</dd>
+          <dt>Email</dt>
+          <dd>La cuenta de correo desde la que se envían las facturas y los presupuestos, y qué dice el email de cada factura. Ver <a href="#email">Enviar por email</a>.</dd>
+          <dt>Series</dt>
+          <dd>La serie A para las facturas y la R para las rectificativas, con una numeración que empieza cada año (A-2026-0001). Puedes crear otras y cambiar su descripción; el código y la numeración no se cambian, porque forman parte de los números de las facturas.</dd>
+          <dt>VERI*FACTU</dt>
+          <dd>Si la empresa está en el modo de pruebas o tiene VERI*FACTU activado, su Licencia Oficial, el certificado con el que se envía, el paso de activar VERI*FACTU, cómo va el envío y los datos del productor del programa. Ver <a href="#aeat">Envío a la AEAT</a>.</dd>
+          <dt>Factura electrónica</dt>
+          <dd>La firma de las facturas electrónicas y la carpeta donde se guarda una copia. Ver <a href="#electronica">Factura electrónica</a>.</dd>
+        </dl>
+        <p><strong>Acerca de</strong>, en la barra lateral, tiene la versión del programa, dónde están tus datos y las <a href="#copias">copias de seguridad</a>, <strong>Buscar actualizaciones</strong>, la declaración responsable del productor (en PDF, para guardarla o imprimirla) y las licencias de terceros.</p>
+      </section>
+
+      <section id="borradores">
+        <h2>4. Hacer una factura</h2>
+        <p>Las facturas se preparan en un borrador y se emiten cuando están bien. Un borrador se puede cambiar cuantas veces quieras; una factura emitida, no.</p>
+        <p>Pulsa <strong>Nueva factura</strong>, en Facturas, en Borradores o en la ficha de un cliente. El editor va en una columna, en el orden de la factura:</p>
+        <ol>
+          <li><strong>Cliente:</strong> búscalo en Clientes por su nombre, su NIF o su población, o pulsa <strong>Escribir un cliente nuevo</strong>. Elegido, sale en resumen. <strong>Corregir sus datos</strong> los cambia solo para esta factura: <strong>Usar en esta factura</strong> los deja así, <strong>Dejar como estaba</strong> los descarta y <strong>Guardar en Clientes</strong> los guarda también en la agenda.</li>
+          <li><strong>Pago y retención:</strong> la forma de pago y la retención de IRPF van con el cliente y salen de su ficha; puedes cambiarlas para esta factura. La retención es de toda la factura: «Sin IRPF» o el tipo que te practique el cliente.</li>
+          <li><strong>Serie y fechas:</strong> la serie, la fecha de la operación (vacía, es la de la emisión) y el vencimiento, en días desde la emisión (vacío, al contado). Casi nunca se tocan: salen en resumen, con <strong>Corregir</strong>.</li>
+          <li><strong>Detalle:</strong> la descripción de la factura, con <strong>Cambiar</strong> (vacía, se usan las de los conceptos), y los conceptos: descripción, cantidad, precio e IVA.</li>
+        </ol>
+        <p>A la derecha ves los totales y, en <strong>Para emitir falta</strong>, lo que falta («Falta el NIF del cliente»…). Cuando no falta nada, pone <strong>Listo para emitir</strong>.</p>
+        <p><strong>Guardar en Borradores</strong> la deja en Borradores, para terminarla o emitirla más tarde. No hay botón Cancelar: sales con el enlace de arriba, que vuelve a la pantalla de la que viniste (<strong>← Borradores</strong>, por ejemplo) y te pregunta si hay cambios sin guardar; <strong>Descartar…</strong> la deja sin guardar. Una factura nueva no existe hasta que la guardas o la emites.</p>
+        <p><strong>Vista previa</strong> muestra el PDF del borrador con la marca de agua «BORRADOR»: es un documento interno, no una factura ni una proforma. Para dar al cliente algo antes de facturar, haz un <a href="#presupuestos">presupuesto o una factura proforma</a>.</p>
+        <h3>Emitir</h3>
+        <p>Al pulsar <strong>Emitir…</strong> y confirmar, la factura se emite con la fecha de hoy y el siguiente número de la serie (en el modo de pruebas, con «PRU-» delante). Después no se puede modificar: si hubiera algún error, se corrige con una factura rectificativa.</p>
+        <p>En la lista de borradores puedes marcar varios y emitirlos de una vez con <strong>Emitir marcados…</strong> (solo se emiten los que estén listos) o borrarlos con <strong>Borrar marcados…</strong>. <strong>Duplicar</strong> crea una copia de un borrador.</p>
+      </section>
+
+      <section id="presupuestos">
+        <h2>5. Presupuestos y facturas proforma</h2>
+        <p>En <strong>Presupuestos</strong> haces lo que ofreces al cliente antes de facturar. <strong>Nuevo presupuesto</strong> abre el mismo editor que una factura; arriba eliges si se saca como <strong>Presupuesto</strong> o como <strong>Factura proforma</strong>. Hasta cuándo es válido (de entrada, 30 días) y, en la proforma, el vencimiento en días salen en resumen, con <strong>Corregir</strong>. Los presupuestos y las proformas son de verdad también en el modo de pruebas: puedes mandarlos a tus clientes sin licencia.</p>
+        <ul>
+          <li>Recibe su número al guardarlo (P-2026-0001) y desde entonces no se puede borrar, como indica la AEAT; se puede cambiar hasta facturarlo. <strong>Ver</strong> y <strong>Enviar por email</strong> lo guardan antes, para que salga ya con su número.</li>
+          <li><strong>Respuesta ▾</strong> anota si el cliente lo ha aceptado o lo ha rechazado. Uno aceptado no caduca.</li>
+          <li><strong>Facturar…</strong> emite la factura directamente, con la fecha de hoy y el siguiente número de la serie por defecto, y la deja ligada al presupuesto («Facturado: A-2026-0023»). Mientras le falte algo para ser factura, el editor dice qué. Uno facturado no se factura otra vez y, con doble clic, se abre en PDF; si su factura se anula, vuelve a su situación.</li>
+          <li><strong>Duplicar</strong> abre una copia sin guardar, para hacer otro parecido.</li>
+        </ul>
+        <figure class="captura">
+          <img src="capturas/presupuestos.png" alt="Pantalla Presupuestos con presupuestos y proformas pendientes, aceptados, rechazados, caducados y facturados" width="1920" height="1140" loading="lazy">
+          <figcaption>Datos de ejemplo.</figcaption>
+        </figure>
+        <p>La lista los enseña todos, con el buscador y su situación: pendiente, aceptado, facturado, rechazado o caducado (estos dos, en gris). Uno facturado ya no se modifica: la AEAT recomienda conservar lo que se entregó al cliente antes de facturar, ligado a su factura.</p>
+      </section>
+
+      <section id="clientes">
+        <h2>6. Clientes</h2>
+        <p>La agenda de clientes sirve para no escribir los datos cada vez. Cada cliente guarda sus datos fiscales, su email, su forma de pago habitual (con su IBAN si paga por domiciliación) y su retención de IRPF.</p>
+        <ul>
+          <li><strong>Nuevo cliente</strong> o <strong>Abrir la ficha</strong> la abren a página completa. <strong>Guardar</strong> se activa cuando está completa, con las mismas comprobaciones que al emitir; mientras, a la derecha se dice lo que falta. No hay botón Cancelar: sales con <strong>← Clientes</strong>, que te pregunta si hay cambios sin guardar.</li>
+          <li>A la derecha de la ficha están sus facturas (cuántas y la última); <strong>Ver sus facturas</strong> te lleva a ellas en Facturas, con sus totales.</li>
+          <li><strong>Nueva factura</strong> crea un borrador con sus datos, su forma de pago y su retención; solo faltan los conceptos.</li>
+          <li>En una factura o un presupuesto, <strong>Guardar en Clientes</strong> guarda el cliente que has escrito.</li>
+          <li>En la lista, <strong>Columnas ▾</strong> añade la dirección, el email o el IBAN.</li>
+        </ul>
+        <p>Los datos del cliente se copian en cada borrador: cambiar o borrar un cliente no toca las facturas ya emitidas ni los borradores que ya lo llevan. Si un cliente cambia de domicilio, cámbialo en su ficha y las próximas facturas saldrán con el nuevo.</p>
+        <h3>Importar clientes de otro programa</h3>
+        <p><strong>Importar…</strong> trae los clientes desde un Excel (.xlsx) o un CSV: el que exporta tu programa anterior o nuestra plantilla (<strong>Descargar la plantilla</strong>, en la misma pantalla). La primera fila lleva los títulos de las columnas; VeriFree reconoce los habituales (NIF o CIF, Nombre o Razón social, Dirección o Domicilio, C.P., Población o Localidad, Provincia, País, Forma de pago, IBAN y Retención).</p>
+        <p>Antes de importar ves qué pasará con cada fila: las completas se importan; las que ya están en Clientes (por su NIF) se dejan igual o, si lo marcas, se actualizan con los datos del archivo; y las que tienen algún error no se importan y se dice por qué, para que las corrijas en el archivo y lo vuelvas a importar.</p>
+        <p class="aviso">Si los archivos antiguos son .xls, ábrelos en Excel y guárdalos como «Libro de Excel (.xlsx)» o como CSV.</p>
+      </section>
+
+      <section id="facturas">
+        <h2>7. Facturas emitidas</h2>
+        <p>En <strong>Facturas</strong> están las emitidas del periodo que elijas: <strong>Mes</strong>, <strong>Trimestre</strong> o <strong>Año</strong>, con las flechas para ir al anterior o al siguiente (el trimestre anterior, el del modelo 303, queda a un clic), o las fechas que escribas. Cada factura cuenta en el periodo de su fecha de operación; en el de su emisión, si es otro, sale en gris. Arriba ves sus totales: base imponible, IVA, retención de IRPF y total. El buscador busca en el número de la factura, en el nombre o el NIF del cliente y en el importe, y el desplegable filtra por forma de pago.</p>
+        <p>Cada factura sale con sus rectificativas en un bloque, con su etiqueta («Orig.», «Sust.», «Dif.» o «Anula»); las de otro periodo, plegadas.</p>
+        <figure class="captura">
+          <img src="capturas/facturas.png" alt="Lista de facturas de VeriFree con los totales del mes y los botones de cada factura" width="1920" height="1140" loading="lazy">
+          <figcaption>Datos de ejemplo.</figcaption>
+        </figure>
+        <p>Con una factura elegida (al pie de la tabla y en el menú del botón derecho):</p>
+        <dl>
+          <dt>Ver</dt>
+          <dd>La factura en PDF, con el QR tributario. Desde el visor se imprime o se guarda. También se abre con doble clic en la factura. Si la factura se ha corregido, el visor lo dice en una franja, con un botón para ver la que vale ahora.</dd>
+          <dt>Enviar por email…</dt>
+          <dd>Ver <a href="#email">Enviar por email</a>.</dd>
+          <dt>Guardar firmada</dt>
+          <dd><strong>PDF firmado…</strong> guarda el PDF de la factura firmado con tu certificado, y <strong>Factura electrónica (XML)…</strong>, la factura electrónica firmada. Ver <a href="#electronica">Factura electrónica</a>.</dd>
+          <dt>Reutilizar</dt>
+          <dd>Una factura nueva con el mismo cliente, los mismos conceptos y el mismo pago, para cambiar lo que haga falta.</dd>
+          <dt>Rectificar</dt>
+          <dd>Abre un borrador con la factura tal como está: déjalo como debió ser y elige en <strong>Cómo se emite</strong> si va por sustitución o por diferencias (cada forma dice cuándo conviene).</dd>
+          <dt>Anular…</dt>
+          <dd>Anula una factura que no debió emitirse. La anulación también se envía a la AEAT.</dd>
+          <dt>Volver a enviar a la AEAT…</dt>
+          <dd>Para una factura que la AEAT rechazó, cuando la causa ya está resuelta. Ver <a href="#aeat">Envío a la AEAT</a>.</dd>
+        </dl>
+        <p>Al pie de la tabla, <strong>Ver el listado</strong> saca en PDF las facturas tal como las ves, con sus totales y el desglose por tipo de IVA. Con <strong>Columnas ▾</strong> eliges qué columnas ves; VeriFree recuerda tu elección, su orden y su ancho.</p>
+      </section>
+
+      <section id="email">
+        <h2>8. Enviar por email</h2>
+        <p><strong>Enviar por email…</strong>, en Facturas y en Presupuestos, abre una ventana con el destinatario, que sale de la ficha del cliente, y el asunto y el texto de tu plantilla, todo editable.</p>
+        <ul>
+          <li>Con tu cuenta de correo configurada, <strong>Enviar</strong> lo manda desde tu dirección, con el PDF adjunto (y, en las facturas, también la factura electrónica). Si marcas <strong>Enviarme una copia</strong>, te llega a ti también.</li>
+          <li>Sin ella, <strong>Escribirlo en mi programa de correo</strong> te da el destinatario, el asunto y el texto para copiarlos, y los archivos para arrastrarlos al mensaje. <strong>Abrir mi programa de correo</strong> lo abre con el destinatario, el asunto y el texto ya escritos (Outlook, Thunderbird o el correo de Windows).</li>
+        </ul>
+        <h3>La cuenta de correo</h3>
+        <p>En <strong>Configuración › Email</strong>, escribe tu email y su contraseña. Con Gmail, Yahoo o iCloud el servidor se rellena solo y hace falta una contraseña de aplicación, que se crea en la página de tu proveedor (el programa te lleva a ella); con el correo de tu dominio, escribe el servidor de salida (SMTP) y el puerto que te indique tu proveedor. <strong>Enviar una prueba</strong> comprueba que funciona. Las cuentas de Outlook.com y Hotmail no se pueden usar así: Microsoft solo deja entrar en ellas con su propio inicio de sesión.</p>
+        <p>En la misma pestaña, en <strong>Qué dice el email de cada factura</strong>, está la plantilla del asunto y del texto. La contraseña se guarda cifrada con tu usuario de Windows: en otro equipo tendrás que volver a escribirla. VeriFree no guarda copia de lo que envías.</p>
+      </section>
+
+      <section id="aeat">
+        <h2>9. Envío a la AEAT</h2>
+        <p>Con VERI*FACTU activado, cada factura y cada anulación se envían solas a la AEAT al emitirlas. Si no hay conexión, el programa lo vuelve a intentar solo y, mientras falte algo, lo avisa una banda arriba con un botón para resolverlo.</p>
+        <h3 id="produccion">Activar VERI*FACTU</h3>
+        <p>Cada empresa empieza en el modo de pruebas: sus facturas llevan «PRU-» delante del número y la banda «Modo de pruebas», no tienen validez y no se envían a la AEAT. Para facturar de verdad, activa VERI*FACTU en <strong>Configuración › VERI*FACTU</strong>, en tres pasos:</p>
+        <ol>
+          <li>Carga la Licencia Oficial de la empresa con <strong>Cargar licencia…</strong>: es el archivo que recibes al comprarla, con el NIF de la empresa. Si aún no la tienes, <strong>Comprar licencia</strong> abre la página donde se compra.</li>
+          <li>Elige el certificado con el que se envía (ver <a href="#certificado">El certificado</a>) y, si quieres, comprueba con <strong>Probar conexión</strong> que llega a la AEAT y tiene poder para esta empresa.</li>
+          <li>Pulsa <strong>Activar VERI*FACTU…</strong>. El programa comprueba el certificado con la AEAT y, si falta algo, te dice qué. Si todo está bien, te pide que confirmes, marcando la casilla, que desde entonces facturas de verdad.</li>
+        </ol>
+        <p>No se puede desactivar: desde entonces, cada factura queda registrada en la AEAT con validez legal, y cada serie empieza en el 1. Las facturas de prueba se conservan con su numeración, pero no cuentan en los totales ni en el libro registro y no se anulan ni se rectifican. La licencia se guarda en la carpeta <span class="ruta">Empresas</span>, así que entra en la copia de seguridad. Cada empresa se activa por su cuenta, aunque otra ya tenga VERI*FACTU activado.</p>
+        <h3 id="certificado">El certificado</h3>
+        <p>En <strong>Configuración › VERI*FACTU</strong>, elige el certificado con el que se envía: el de la empresa o el de quien tenga poder para enviar por ella (apoderado o colaborador social). El programa lista los certificados instalados en Windows que sirven para conectar con la AEAT; si el tuyo está en un archivo, usa <strong>Importar archivo .pfx / .p12…</strong>.</p>
+        <p>El certificado se queda en Windows: en la carpeta de la empresa no se guarda ni el certificado ni su contraseña. Por eso, en otro equipo hay que volver a instalarlo. Desde un mes antes de que caduque, una banda lo avisa: renuévalo y elige el nuevo aquí.</p>
+        <h3>Si algo falla</h3>
+        <ul>
+          <li>En la misma pestaña, <strong>Cómo va el envío</strong> dice cuántos registros quedan por enviar. <strong>Enviar ahora</strong> los envía sin esperar al próximo intento, respetando el tiempo de espera que fija la AEAT.</li>
+          <li>En <strong>Facturas</strong>, la casilla <strong>Solo con avisos de la AEAT</strong> deja solo las facturas que la AEAT ha rechazado o ha aceptado con errores.</li>
+          <li>Cuando la causa esté resuelta, <strong>Volver a enviar a la AEAT…</strong> envía de nuevo esa factura con los mismos datos. Si el error está en los datos de la factura, se corrige con una rectificativa o se anula.</li>
+        </ul>
+      </section>
+
+      <section id="electronica">
+        <h2>10. Factura electrónica</h2>
+        <p>Cada factura emitida tiene su factura electrónica en el formato de la AEAT (UBL), firmada justo después de emitirla con el certificado de la empresa o el de su representante (con el de otra persona, la factura figuraría expedida por ella). Lleva la dirección del QR, con la que quien la recibe comprueba en la AEAT que está registrada.</p>
+        <p>Si no se puede firmar, se sigue facturando y una banda lo avisa. <strong>Firmar ahora</strong>, en <strong>Configuración › Factura electrónica</strong>, firma lo pendiente sin esperar al próximo intento.</p>
+        <p>Ahí mismo puedes guardar una copia de cada factura firmada en una carpeta de archivo, por año y mes. La predeterminada está dentro de la carpeta de la empresa, así que entra en la copia de seguridad; también puedes elegir otra, por ejemplo una que compartas con tu asesoría.</p>
+        <h3>Guardar firmada</h3>
+        <p>En <strong>Facturas</strong>, <strong>Guardar firmada</strong> ofrece dos cosas: <strong>Factura electrónica (XML)…</strong> guarda la factura electrónica firmada, para enviarla al cliente; <strong>PDF firmado…</strong> guarda el PDF de la factura firmado con el certificado de la empresa, que prueba quién la expidió y que no se ha cambiado. El PDF firmado no se guarda en el programa: se firma cada vez que lo pides.</p>
+      </section>
+
+      <section id="libro">
+        <h2>11. Libro registro</h2>
+        <p>En <strong>Facturas</strong>, <strong>Exportar libro…</strong> guarda el libro registro de facturas expedidas del ejercicio, hasta el final del periodo elegido, en el formato de la AEAT. Es lo que suele pedir la asesoría, y lleva también la hoja de facturas recibidas vacía, para que ella añada los gastos.</p>
+        <p>Antes, elige la actividad económica de la empresa en <strong>Configuración › Empresa</strong>: se busca por su nombre en la lista de actividades y epígrafes del IAE de la AEAT.</p>
+      </section>
+
+      <section id="recurrentes">
+        <h2>12. Facturas recurrentes</h2>
+        <p>En <strong>Recurrentes</strong> guardas lo que facturas a un cliente cada cierto tiempo, y lo emites cuando quieres, sin pasar por Borradores. <strong>Nueva recurrente</strong> abre su ficha:</p>
+        <ul>
+          <li>El cliente, de la agenda. Su forma de pago y su retención son siempre las de su ficha.</li>
+          <li>La descripción de la factura, la serie y el periodo que se factura: semana, quincena, mes, trimestre o año. El periodo solo decide qué ponen los comodines <code>{periodo}</code> y <code>{periodo pasado}</code>, que se insertan con <strong>Este periodo</strong> y <strong>El periodo pasado</strong> donde esté el cursor, en la descripción o en un concepto. Al emitir se cambian por el periodo del día de la emisión: «Mantenimiento de {periodo}» sale como «Mantenimiento de noviembre de 2026». Con <code>{periodo pasado}</code> se factura a periodo vencido.</li>
+          <li>Los conceptos, como en una factura, y si vence a unos días de emitirla (si no, al contado).</li>
+          <li>A la derecha, <strong>Así saldría hoy</strong>.</li>
+        </ul>
+        <figure class="captura">
+          <img src="capturas/recurrentes.png" alt="Pantalla Recurrentes con cada recurrente y su última factura" width="1920" height="1140" loading="lazy">
+          <figcaption>Datos de ejemplo.</figcaption>
+        </figure>
+        <p>La lista no tiene calendario: nada viene marcado, y cada recurrente dice cuándo salió su última factura. Marca las que quieres facturar; <strong>Ver el listado</strong> te las enseña en PDF antes de emitirlas, y <strong>Emitir marcadas…</strong> las emite todas de una vez.</p>
+        <p><strong>Retocar…</strong> cambia algo solo en la próxima factura de una recurrente (un concepto de más, otro precio), sin tocar las siguientes; se emite después desde la lista, con las demás. <strong>Quitar el retoque…</strong> la deja otra vez como la recurrente. Para cambiar todas las facturas que se emitan desde ahora, abre la recurrente y cámbiala. No hay pausa ni fecha de fin: si una deja de hacer falta, <strong>Borrar…</strong> la quita, y las facturas ya emitidas no cambian.</p>
+      </section>
+
+      <section id="remesas">
+        <h2>13. Remesas SEPA</h2>
+        <p>En <strong>Remesas</strong> cobras de una vez las facturas domiciliadas: generas el fichero de adeudos directos SEPA y lo subes en la web de tu banco. La pantalla enseña las remesas que has generado.</p>
+        <ol>
+          <li>Pulsa <strong>Nueva remesa</strong>. Salen las facturas domiciliadas del periodo que elijas (de entrada, el mes en curso), y vienen marcadas las que aún no han ido en ninguna remesa; la columna <strong>Última remesa</strong> dice en cuál ha ido cada una. Marca o desmarca las que quieras, por ejemplo para volver a cobrar un recibo devuelto.</li>
+          <li>Las que aún no se pueden cobrar llevan un aviso en lugar de la casilla; al pasar el ratón por él, dice qué falta. Si es la orden de domiciliación del cliente, elige la factura y pulsa <strong>Orden de domiciliación…</strong> (o haz doble clic en ella) para escribir su referencia y la fecha en que el cliente la firmó. Si aún no la tiene, <strong>Orden para firmar</strong> te da el modelo de la banca española, relleno, para imprimirlo.</li>
+          <li>Para cobrar por remesa una factura de otra forma de pago, o en otra cuenta, marca <strong>Ver también las de otras formas de pago</strong> y usa <strong>Cuenta para el cobro…</strong>: la factura no cambia.</li>
+          <li>Elige el día de cobro en <strong>Cobrar el</strong> (de entrada, el primero posible: el banco necesita el fichero con unos días de antelación) y pulsa <strong>Generar remesa…</strong>, que crea el fichero para el banco y su listado en PDF.</li>
+        </ol>
+        <figure class="captura">
+          <img src="capturas/remesas.png" alt="Nueva remesa con las facturas domiciliadas del mes marcadas para cobrarlas" width="1920" height="1140" loading="lazy">
+          <figcaption>Datos de ejemplo.</figcaption>
+        </figure>
+        <p>En la lista de remesas, <strong>Guardar fichero para el banco…</strong> lo vuelve a guardar y <strong>Ver el listado</strong> enseña su PDF. <strong>Borrar…</strong> quita una remesa, por ejemplo si no la llegaste a subir: las facturas no cambian. El identificador de acreedor se calcula de tu NIF; si tu banco te ha dado un código comercial distinto de 000, cámbialo con <strong>Cambiar</strong>, junto al identificador, en Nueva remesa.</p>
+        <p class="aviso">VeriFree no lleva el control de cobros: no marca facturas como cobradas, solo dice en qué remesa ha ido cada una.</p>
+      </section>
+
+      <section id="copias">
+        <h2>14. Copias de seguridad y seguridad de los datos</h2>
+        <p>Al ser un software local sin servidores intermedios, la custodia legal y conservación de tus registros corresponde a tu empresa (art. 29.2.e LGT). Todo lo de cada empresa está en su carpeta, dentro de <span class="ruta">Empresas</span>, junto a <span class="ruta">VeriFree.exe</span>.</p>
+        <p>En <strong>Acerca de › Sus datos</strong>:</p>
+        <ul>
+          <li><strong>Hacer una copia de seguridad…</strong> guarda en un solo archivo todas tus empresas, con sus facturas electrónicas, donde elijas: un disco externo, una memoria USB o tu nube. No hace falta cerrar el programa. Si pasa un mes sin hacerla, una banda arriba te lo recuerda.</li>
+          <li><strong>Restaurar una copia…</strong> deja tus datos como estaban en la copia. Antes guarda una copia de los datos de ahora, por si acaso, y después vuelve a abrir el programa. Si la copia es más antigua que tus datos, te avisa: las facturas posteriores ya están en la AEAT, y volver a emitir sus números daría error.</li>
+        </ul>
+        <p>Para pasar a un equipo nuevo: haz una copia, pon <span class="ruta">VeriFree.exe</span> en el equipo nuevo y, al abrirlo, pulsa <strong>Restaurar una copia…</strong> en Crear empresa. Después instala tu certificado digital y, si envías los emails desde VeriFree, vuelve a escribir la contraseña del correo. Por seguridad, ni el certificado ni esa contraseña van en la copia.</p>
+
+        <h3>Recomendaciones de seguridad y prevención</h3>
+        <ul>
+          <li><strong>Copias periódicas externas:</strong> Guarda una copia semanal o mensual en una memoria USB o disco duro externo que desconectes tras la copia. Así tus bases de datos quedarán completamente a salvo incluso ante incidentes graves de avería física o ataques de ransomware en tu red.</li>
+          <li><strong>Copias en la nube:</strong> Puedes guardar las copias en OneDrive, Google Drive, Dropbox o iCloud, pero trabaja con VeriFree en una carpeta normal del equipo: si el programa está dentro de una carpeta que se sincroniza, te avisa, porque sincronizarla con el programa abierto puede dañar los datos.</li>
+          <li><strong>Copia del certificado digital:</strong> Conserva el archivo instalador original de tu certificado digital (archivo <code>.pfx</code> o <code>.p12</code> con su contraseña) en un pendrive seguro por si necesitas cambiar o formatear tu equipo con urgencia.</li>
+        </ul>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="marco">
+    <div class="pie-rejilla">
+      <div class="pie-col">
+        <div class="marca">
+          <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
+          VeriFree <span>Facturación</span>
+        </div>
+        <p>Software de facturación para Windows adaptado al Reglamento VERI*FACTU. Con el código público, para que cualquiera pueda comprobar qué hace.</p>
+      </div>
+
+      <div class="pie-col">
+        <h5>Navegación</h5>
+        <ul class="pie-enlaces">
+          <li><a href="caracteristicas.html">Características</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="garantia.html">Garantía legal</a></li>
+          <li><a href="preguntas.html">Preguntas</a></li>
+          <li><a href="manual.html">Manual de uso</a></li>
+          <li><a href="descargas.html">Descargas</a></li>
+          <li><a href="compilalo.html">Compílalo tú</a></li>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código en GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="pie-col">
+        <h5>Sede y titularidad legal</h5>
+        <ul class="pie-contacto">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 21V3h6v18"/></svg>
+            <span><strong>VeriFree, S.L.</strong></span>
+          </li>
+          <li class="pie-cif">
+            <span></span>
+            <span>NIF B05821780 · Inscrita en el Registro Mercantil de Alicante, hoja A-208993, inscripción 1.ª</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>C/ Reyes Católicos, 24, 1º Izq. · 03003 Alicante</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Tel. <a href="tel:965134033">965 13 40 33</a> · <a href="tel:686600299">686 60 02 99</a></span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:contacto@verifree.es">contacto@verifree.es</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pie-legal">
+      <span>© 2026 VeriFree, S.L. Todos los derechos reservados. Información general en cumplimiento del art. 10 de la Ley 34/2002 (LSSI-CE).</span>
+      <span>Web 100% privada: libre de cookies de terceros y libre de rastreo. <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="verifree.js" defer></script>
+</body>
+</html>
