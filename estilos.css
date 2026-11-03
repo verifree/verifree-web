@@ -3070,4 +3070,40 @@ p.aviso {
   .cabecera, .pie, .volver { display: none !important; }
   .pagina-cabecera { padding-block: 0 1rem; }
   .pagina-cabecera h1 { margin-top: 0; }
+  .solo-pantalla { display: none; }
+
+  /* Las condiciones de compra se imprimen como un documento: letra sobria, los datos en tabla y un pie con el
+     número de página en cada hoja. */
+  body.documento { page: documento; font-family: Arial, Helvetica, sans-serif; color: #222; background: #fff; }
+  @page documento {
+    margin: 16mm 18mm 18mm;
+    @bottom-left { content: "VeriFree, S.L. · Condiciones de compra"; font: 7.5pt Arial, sans-serif; color: #777; }
+    @bottom-right { content: "Página " counter(page) " de " counter(pages); font: 7.5pt Arial, sans-serif; color: #777; }
+  }
+  .documento .pagina-cabecera { padding: 0; background: none; }
+  .documento .pagina-cabecera::before { display: none; }
+  .documento .pagina-cabecera h1 { max-width: none; font-size: 17pt; font-weight: 700; line-height: 1.2; letter-spacing: 0; }
+  .documento .seccion { padding: 0; }
+  .documento .marco { max-width: none; padding: 0; }
+  .documento .texto { max-width: none; font-size: 9.5pt; line-height: 1.45; }
+  .documento .texto p,
+  .documento .texto ul,
+  .documento .texto ol { margin-top: 5pt; color: #222; }
+  .documento .texto ul,
+  .documento .texto ol { gap: 3pt; }
+  .documento .texto h2 {
+    margin-top: 14pt;
+    padding-bottom: 3pt;
+    border-bottom: 0.5pt solid #ccc;
+    font-size: 11pt;
+    letter-spacing: 0;
+    break-after: avoid;
+  }
+  .documento .texto li { break-inside: avoid; }
+  .documento .vigencia { padding-bottom: 8pt; border-bottom: 1.2pt solid #222; font-size: 8pt; color: #666; }
+  .documento .texto dl { display: grid; grid-template-columns: 35% 1fr; margin-top: 8pt; border: 0.5pt solid #ccc; border-bottom: 0; }
+  .documento .texto dt,
+  .documento .texto dd { margin: 0; padding: 4pt 6pt; border-bottom: 0.5pt solid #ccc; color: #222; }
+  .documento .texto dd { border-left: 0.5pt solid #ccc; }
+  .documento a { color: inherit; text-decoration: none; }
 }
