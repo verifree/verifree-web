@@ -3064,3 +3064,10 @@ p.aviso {
 .manifiesto footer a { color: inherit; }
 .codigo-pasos .acciones { margin-top: 1.25rem; }
 .texto-pagina .veri { margin: 0 0 2rem; }
+
+/* Al imprimir una página (las condiciones de compra, por ejemplo), solo su contenido. */
+@media print {
+  .cabecera, .pie, .volver { display: none !important; }
+  .pagina-cabecera { padding-block: 0 1rem; }
+  .pagina-cabecera h1 { margin-top: 0; }
+}
