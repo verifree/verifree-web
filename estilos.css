@@ -2853,8 +2853,9 @@ p.aviso {
 }
 
 @media (max-width: 760px) {
+  /* Arriba, el espacio de la cinta (max-width: 900px) */
   .portada {
-    padding-block: 2.75rem 3.5rem;
+    padding-bottom: 3.5rem;
   }
 
   .cita {
