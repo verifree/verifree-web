@@ -715,8 +715,11 @@ summary::-webkit-details-marker {
   margin-top: clamp(3.5rem, 7vw, 6rem);
 }
 
-.escenario > img {
+.escenario > img,
+.escenario > video {
+  display: block;
   width: 100%;
+  height: auto;
   border-radius: 14px;
   background: var(--blanco);
   box-shadow: var(--sombra-captura);

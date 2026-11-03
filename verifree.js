@@ -7,6 +7,14 @@
   var sinMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hayObservador = 'IntersectionObserver' in window;
 
+  /* El vídeo de la portada: quieto, con sus controles, para quien no quiere animaciones */
+  var videoPortada = document.querySelector('.escenario video');
+  if (videoPortada && sinMovimiento) {
+    videoPortada.removeAttribute('autoplay');
+    videoPortada.pause();
+    videoPortada.controls = true;
+  }
+
   /* Menú móvil hamburguesa */
   var botonHamb = document.querySelector('.btn-hamburguesa');
   var menuNav = document.getElementById('menu-principal') || document.querySelector('.menu');
