@@ -7,6 +7,12 @@
   var sinMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hayObservador = 'IntersectionObserver' in window;
 
+  /* Un enlace a una pregunta concreta (preguntas.html#que-certificado) la abre */
+  if (location.hash) {
+    var destino = document.getElementById(location.hash.slice(1));
+    if (destino && destino.tagName === 'DETAILS') destino.open = true;
+  }
+
   /* El vídeo de la portada: quieto, con sus controles, para quien no quiere animaciones */
   var videoPortada = document.querySelector('.escenario video');
   if (videoPortada && sinMovimiento) {
