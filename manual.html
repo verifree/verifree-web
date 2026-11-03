@@ -43,7 +43,7 @@
       <a href="contacto.html">Contacto</a>
     </nav>
     <div class="cabecera-acciones">
-      <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/verifree/verifree-web/releases/latest/download/VeriFree.exe" download>
+      <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/verifree/verifree-web/releases/latest/download/VeriFree-instalador.exe" download>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Probar gratis
       </a>
@@ -84,20 +84,19 @@
 
       <section id="instalar">
         <h2>1. Instalar</h2>
-        <p>VeriFree es un único archivo portátil, <span class="ruta">VeriFree.exe</span>, que no requiere instalación previa ni permisos especiales (puedes <a href="https://github.com/verifree/verifree-web/releases/latest/download/VeriFree.exe" download>descargarlo aquí</a> o usar tu ejecutable oficial con licencia). Funciona en Windows 10 u 11 de 64 bits y lleva dentro todo lo que necesita. Para empezar a usarlo:</p>
+        <p>VeriFree se instala con su instalador, <span class="ruta">VeriFree-instalador.exe</span> (puedes <a href="https://github.com/verifree/verifree-web/releases/latest/download/VeriFree-instalador.exe" download>descargarlo aquí</a>). Es el mismo programa para probarlo y para facturar de verdad: la licencia se carga después, en el programa. Funciona en Windows 10 u 11 de 64 bits y lleva dentro todo lo que necesita. Para instalarlo:</p>
         <ol>
-          <li>Guarda <span class="ruta">VeriFree.exe</span> en una carpeta tuya, por ejemplo en <span class="ruta">Documentos\VeriFree</span>.</li>
-          <li>Ábrelo desde esa carpeta con doble clic. Si Windows SmartScreen muestra un aviso, pulsa <strong>Más información</strong> y después <strong>Ejecutar de todas formas</strong>.</li>
+          <li>Abre <span class="ruta">VeriFree-instalador.exe</span>. Si Windows SmartScreen muestra un aviso, pulsa <strong>Más información</strong> y después <strong>Ejecutar de todas formas</strong>.</li>
+          <li>Windows te pregunta si permites que haga cambios en el equipo: pulsa <strong>Sí</strong>. VeriFree se instala en «Archivos de programa», para todos los usuarios del equipo.</li>
+          <li>Elige si quieres tenerlo también en el escritorio y pulsa <strong>Siguiente</strong>. Al pulsar <strong>Finalizar</strong> se abre, y desde entonces lo tienes en el menú Inicio.</li>
         </ol>
-        <p class="aviso">Si lo abres directamente desde un ZIP o desde un correo, el programa te avisa y no sigue: Windows lo ejecutaría desde una carpeta temporal y los datos se perderían.</p>
-        <p>Los datos se guardan junto al programa, en la carpeta <span class="ruta">Empresas</span>, una carpeta por empresa. Mejor en una carpeta de este equipo: si está en una carpeta de red o en una que sincroniza OneDrive, Dropbox o Google Drive, el programa te avisa, porque los datos podrían dañarse. A la nube, lleva solo las copias de seguridad.</p>
-        <h3>Comprobación de integridad (SHA-256)</h3>
-        <p>Para comprobar que el ejecutable descargado no ha sufrido alteraciones y coincide con el publicado, puedes verificar su huella digital en PowerShell:</p>
-        <p><code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></p>
-        <p>La huella SHA-256 oficial de la versión 0.0.1, la que hay en la web, es:<br><code class="huella-valor">48A3FC4799BC4B1364846535BE33CD9F2BB173ED88C575CF2C24D07BD84E984B</code></p>
+        <p>Tus datos se guardan aparte del programa, en la carpeta VeriFree de tu usuario de Windows (<span class="ruta">C:\Users\&lt;tu usuario&gt;\VeriFree</span>), con una carpeta por empresa. Cada usuario de Windows tiene los suyos. Dónde están te lo dice <strong>Acerca de › Sus datos</strong>.</p>
+        <p>Para comprobar que el instalador es el original, mira <a href="descargas.html">Descargas</a>.</p>
         <h3>Cómo actualizar a una nueva versión</h3>
-        <p>En <strong>Acerca de</strong>, <strong>Buscar actualizaciones</strong> consulta si hay una versión nueva, sin enviar ningún dato tuyo. Si la hay, te dice qué trae y la instala: antes guarda una copia de tus datos y después vuelve a abrir el programa con la versión nueva. Si tu licencia no cubre esa versión, te ofrece renovarla.</p>
-        <p>También puedes hacerlo a mano: cierra VeriFree y sustituye <span class="ruta">VeriFree.exe</span> por el de la versión nueva. No borres la carpeta <span class="ruta">Empresas</span>: ahí están tus empresas, sus facturas, su configuración y tus licencias, y el programa pone al día sus datos al abrirse. La versión que tienes se ve en <strong>Acerca de</strong>.</p>
+        <p>En <strong>Acerca de</strong>, <strong>Buscar actualizaciones</strong> consulta si hay una versión nueva, sin enviar ningún dato tuyo. Si la hay, te dice qué trae y, al pulsar <strong>Actualizar</strong>, la descarga y la instala: antes guarda una copia de tus datos, Windows te pide permiso y el programa se vuelve a abrir con la versión nueva. Si tu licencia no cubre esa versión, te ofrece renovarla.</p>
+        <p>También puedes hacerlo a mano: descarga el instalador de la versión nueva y ábrelo. Si VeriFree está abierto, lo cierra antes (si tienes algo sin guardar, te pide que lo cierres tú). Si tu licencia no cubre esa versión, te lo explica y no instala nada. Tus datos no se tocan. La versión que tienes se ve en <strong>Acerca de</strong>.</p>
+        <h3>Desinstalar</h3>
+        <p>En <strong>Configuración de Windows › Aplicaciones</strong>. Quita el programa, nunca tus datos: si lo vuelves a instalar, los encontrarás como estaban.</p>
       </section>
 
       <section id="empresa">
@@ -292,18 +291,18 @@
 
       <section id="copias">
         <h2>14. Copias de seguridad y seguridad de los datos</h2>
-        <p>Al ser un software local sin servidores intermedios, la custodia legal y conservación de tus registros corresponde a tu empresa (art. 29.2.e LGT). Todo lo de cada empresa está en su carpeta, dentro de <span class="ruta">Empresas</span>, junto a <span class="ruta">VeriFree.exe</span>.</p>
+        <p>Al ser un software local sin servidores intermedios, la custodia legal y conservación de tus registros corresponde a tu empresa (art. 29.2.e LGT). Todo lo de cada empresa está en su carpeta, dentro de la carpeta VeriFree de tu usuario de Windows (<span class="ruta">C:\Users\&lt;tu usuario&gt;\VeriFree</span>).</p>
         <p>En <strong>Acerca de › Sus datos</strong>:</p>
         <ul>
           <li><strong>Hacer una copia de seguridad…</strong> guarda en un solo archivo todas tus empresas, con sus facturas electrónicas, donde elijas: un disco externo, una memoria USB o tu nube. No hace falta cerrar el programa. Si pasa un mes sin hacerla, una banda arriba te lo recuerda.</li>
           <li><strong>Restaurar una copia…</strong> deja tus datos como estaban en la copia. Antes guarda una copia de los datos de ahora, por si acaso, y después vuelve a abrir el programa. Si la copia es más antigua que tus datos, te avisa: las facturas posteriores ya están en la AEAT, y volver a emitir sus números daría error.</li>
         </ul>
-        <p>Para pasar a un equipo nuevo: haz una copia, pon <span class="ruta">VeriFree.exe</span> en el equipo nuevo y, al abrirlo, pulsa <strong>Restaurar una copia…</strong> en Crear empresa. Después instala tu certificado digital y, si envías los emails desde VeriFree, vuelve a escribir la contraseña del correo. Por seguridad, ni el certificado ni esa contraseña van en la copia.</p>
+        <p>Para pasar a un equipo nuevo: haz una copia, instala VeriFree en el equipo nuevo y, al abrirlo, pulsa <strong>Restaurar una copia…</strong> en Crear empresa. Después instala tu certificado digital y, si envías los emails desde VeriFree, vuelve a escribir la contraseña del correo. Por seguridad, ni el certificado ni esa contraseña van en la copia.</p>
 
         <h3>Recomendaciones de seguridad y prevención</h3>
         <ul>
           <li><strong>Copias periódicas externas:</strong> Guarda una copia semanal o mensual en una memoria USB o disco duro externo que desconectes tras la copia. Así tus bases de datos quedarán completamente a salvo incluso ante incidentes graves de avería física o ataques de ransomware en tu red.</li>
-          <li><strong>Copias en la nube:</strong> Puedes guardar las copias en OneDrive, Google Drive, Dropbox o iCloud, pero trabaja con VeriFree en una carpeta normal del equipo: si el programa está dentro de una carpeta que se sincroniza, te avisa, porque sincronizarla con el programa abierto puede dañar los datos.</li>
+          <li><strong>Copias en la nube:</strong> Puedes guardar las copias en OneDrive, Google Drive, Dropbox o iCloud.</li>
           <li><strong>Copia del certificado digital:</strong> Conserva el archivo instalador original de tu certificado digital (archivo <code>.pfx</code> o <code>.p12</code> con su contraseña) en un pendrive seguro por si necesitas cambiar o formatear tu equipo con urgencia.</li>
         </ul>
       </section>
