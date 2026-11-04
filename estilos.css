@@ -91,7 +91,6 @@
 .pie,
 .codigo,
 .explorador-panel,
-.flotante,
 .resumen-destacada,
 .plan-destacado {
   --tinta: #ffffff;
@@ -711,7 +710,6 @@ summary::-webkit-details-marker {
 
 /* Captura de la portada */
 .escenario {
-  position: relative;
   margin-top: clamp(3.5rem, 7vw, 6rem);
 }
 
@@ -723,64 +721,6 @@ summary::-webkit-details-marker {
   border-radius: 14px;
   background: var(--blanco);
   box-shadow: var(--sombra-captura);
-}
-
-/* Tarjetas flotantes sobre la captura: oscuras, para que destaquen sobre el programa y sobre el fondo */
-.flotante {
-  position: absolute;
-  z-index: 2;
-  padding: 1.25rem 1.4rem;
-  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.3), transparent 60%), var(--marino);
-  border-radius: 22px;
-  box-shadow: 0 30px 60px -18px rgba(11, 11, 12, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.1);
-  color: var(--tinta);
-  text-align: left;
-}
-
-.flotante svg {
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-bottom: 0.75rem;
-  color: var(--naranja);
-}
-
-.flotante strong {
-  display: block;
-  font-size: 1.375rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-}
-
-.flotante span {
-  display: block;
-  margin-top: 0.4rem;
-  color: var(--tinta-2);
-  font-size: 0.875rem;
-}
-
-/* Sobre la zona blanca del programa, no sobre su barra lateral, que es del mismo azul que la tarjeta */
-.flotante-izq {
-  left: 43%;
-  bottom: -13%;
-  max-width: 14rem;
-}
-
-.flotante-der {
-  right: -10%;
-  top: -10%;
-  width: 13.5rem;
-  padding: 0.55rem;
-}
-
-.flotante-der img {
-  border-radius: 14px;
-}
-
-.flotante-der strong {
-  padding: 0.7rem 0.6rem 0.4rem;
-  font-size: 1.125rem;
 }
 
 /* Veri, la mascota: un lince ibérico («ojos de lince»), que parpadea (mascota/veri.svg) */
@@ -2487,14 +2427,6 @@ p.aviso {
     animation: enfocar 1.2s var(--curva) 1s both;
   }
 
-  .flotante {
-    animation: flotar 6s ease-in-out infinite;
-  }
-
-  .flotante-der {
-    animation-delay: -3s;
-  }
-
   .veri-bocadillo {
     animation: enfocar 0.8s var(--curva) both;
   }
@@ -2581,7 +2513,6 @@ p.aviso {
 
 @keyframes girar { to { transform: rotate(360deg); } }
 @keyframes enfocar { from { opacity: 0; filter: blur(12px); transform: translateY(0.35em); } to { opacity: 1; filter: none; transform: none; } }
-@keyframes flotar { 50% { transform: translateY(-12px); } }
 @keyframes avance { to { width: 100%; } }
 @keyframes subir { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @keyframes aparecer { from { opacity: 0; } to { opacity: 1; } }
@@ -2610,13 +2541,6 @@ p.aviso {
 
   .precios-extra > div {
     grid-column: 1 / -1;
-  }
-}
-
-/* Sin margen a los lados de la captura, la tarjeta de arriba se cortaría contra el borde de la pantalla */
-@media (max-width: 1380px) {
-  .flotante-der {
-    right: -3%;
   }
 }
 
@@ -2811,11 +2735,6 @@ p.aviso {
     position: static;
     margin-bottom: 2.5rem;
   }
-
-  .flotante {
-    display: none;
-  }
-
 }
 
 @media (max-width: 900px) {
