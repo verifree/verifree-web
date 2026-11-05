@@ -2264,6 +2264,19 @@ summary::-webkit-details-marker {
   margin-top: 0.5rem;
 }
 
+/* Recuadro de VeriFree al final de una guía */
+.texto .prueba {
+  margin: clamp(3rem, 6vw, 4rem) 0 0;
+}
+
+.texto .prueba h3 {
+  margin-top: 0;
+}
+
+.texto .prueba .btn {
+  margin-top: 0;
+}
+
 /* Cita del fundador, al final de Quiénes somos: su foto de medio cuerpo junto a la cita y la firma */
 .cita {
   display: grid;
