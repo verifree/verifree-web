@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VERI*FACTU y factura electrónica: diferencias, fechas y el PDF firmado · VeriFree Facturación</title>
+<meta name="description" content="En qué se diferencian VERI*FACTU y la factura electrónica obligatoria, por qué un PDF firmado no vale como factura electrónica obligatoria, a quién obliga y desde cuándo: 6 de octubre de 2027 o de 2028.">
+<meta property="og:title" content="VERI*FACTU y factura electrónica: diferencias, fechas y el PDF firmado · VeriFree Facturación">
+<meta property="og:description" content="En qué se diferencian VERI*FACTU y la factura electrónica obligatoria, por qué un PDF firmado no vale como factura electrónica obligatoria, a quién obliga y desde cuándo: 6 de octubre de 2027 o de 2028.">
+<meta property="og:image" content="https://verifree.es/icono.png">
+<meta property="og:url" content="https://verifree.es/verifactu-factura-electronica.html">
+<link rel="canonical" href="https://verifree.es/verifactu-factura-electronica.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="icono.svg">
+<link rel="alternate icon" type="image/png" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
+<link rel="preload" href="fuentes/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marco">
+    <a class="marca" href="./">
+      <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
+      VeriFree <span>Facturación</span>
+    </a>
+    <nav class="menu" id="menu-principal" aria-label="Navegación principal">
+      <a href="caracteristicas.html">Características</a>
+      <a href="precios.html">Precios</a>
+      <a href="garantia.html">Garantía</a>
+      <a href="nosotros.html">Nosotros</a>
+      <div class="menu-grupo actual">
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-ayuda">Ayuda</button>
+        <div class="submenu" id="submenu-ayuda">
+          <a href="preguntas.html">Preguntas</a>
+          <a href="guias.html" aria-current="page">Guías</a>
+          <a href="manual.html">Manual</a>
+          <a href="descargas.html">Descargas</a>
+        </div>
+      </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="cabecera-acciones">
+      <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/verifree/verifree-web/releases/latest/download/VeriFree-instalador.exe" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Probar gratis
+      </a>
+      <button type="button" class="btn-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span class="linea-hamb"></span>
+        <span class="linea-hamb"></span>
+        <span class="linea-hamb"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="pagina-cabecera">
+    <div class="marco">
+      <a class="volver" href="guias.html">← Todas las guías</a>
+      <h1>VERI*FACTU y la factura electrónica: en qué se diferencian y cuándo llega cada una</h1>
+      <p>Revisada el 5 de noviembre de 2026.</p>
+    </div>
+  </section>
+  <section class="seccion seccion-pagina">
+    <div class="marco">
+      <article class="texto texto-pagina">
+        <p class="intro"><strong>En resumen:</strong> son dos obligaciones distintas. VERI*FACTU trata del programa con el que facturas: que no deje alterar facturas y que envíe a Hacienda un registro de cada una. La factura electrónica obligatoria trata de la propia factura entre empresas: tendrá que ser un archivo estructurado (un XML), no un PDF, y viajar por una plataforma o por la solución pública de la AEAT. Para quien factura hasta 8 millones al año, empieza el 6 de octubre de 2028, y Hacienda ha anunciado que quiere retrasar VERI*FACTU hasta entonces.</p>
+
+        <h2>Qué es cada una</h2>
+        <h3>VERI*FACTU (RD 1007/2023)</h3>
+        <ul>
+          <li>Trata del programa de facturación.</li>
+          <li>Afecta a casi todos los que facturan con un programa, también cuando el cliente es un particular.</li>
+          <li>Pide que el programa no deje alterar facturas, que ponga el QR en cada una y que envíe un registro de cada factura a Hacienda.</li>
+        </ul>
+        <h3>La factura electrónica obligatoria (Ley 56/2007, art. 2 bis, y RD 238/2026)</h3>
+        <ul>
+          <li>Trata de la factura que mandas a otra empresa o profesional en España.</li>
+          <li>Pide un formato estructurado y enviarla por una plataforma o por la solución pública de la AEAT.</li>
+          <li>Quien la recibe tiene que decir si la acepta y cuándo la paga.</li>
+        </ul>
+        <p>Las dos están unidas: la factura electrónica obligatoria tiene que salir de un programa adaptado a VERI*FACTU (RD 238/2026, art. 2.d).</p>
+
+        <h2>El XML y el PDF firmado no son lo mismo</h2>
+        <ul>
+          <li><strong>Hoy</strong>, una factura en PDF enviada por correo ya es «factura electrónica» si tu cliente lo acepta (RD 1619/2012, art. 9). Si la firmas con tu certificado, queda garantizado que es tuya y que nadie la ha cambiado: el lector de PDF lo comprueba al abrirla.</li>
+          <li><strong>Con la obligación</strong>, la factura entre empresas tendrá que ser un mensaje estructurado: un archivo XML con los datos en campos que lee un programa, en UBL, CII, EDIFACT o Facturae (RD 238/2026, art. 7.1). La solución pública de la AEAT usa UBL. Un PDF, aunque esté firmado, no vale como factura electrónica obligatoria.</li>
+          <li><strong>El PDF sigue sirviendo para leerla.</strong> Quien factura más de 8 millones tendrá que acompañar el XML de un PDF durante el primer año, salvo que su cliente acepte recibir solo el XML (disposición transitoria segunda).</li>
+          <li><strong>La firma:</strong> las facturas que se envíen por una plataforma privada tendrán que ir con firma electrónica avanzada del emisor o con una firma delegada autorizada (art. 7.3).</li>
+        </ul>
+
+        <h2>A quién obliga y cuándo</h2>
+        <ul>
+          <li><strong>A quien factura a otra empresa o profesional con sede en España.</strong> No afecta a las facturas a particulares ni a las simplificadas (tiques), salvo las simplificadas cualificadas (arts. 3 y 4).</li>
+          <li><strong>Más de 8 millones de volumen de operaciones el año anterior:</strong> desde el 6 de octubre de 2027.</li>
+          <li><strong>Los demás:</strong> desde el 6 de octubre de 2028.</li>
+          <li><strong>El estado de la factura:</strong> quien la recibe tiene que decir si la acepta o la rechaza y cuándo la paga entera, en un máximo de cuatro días sin contar fines de semana ni festivos nacionales (art. 10). Para los autónomos y comunidades de bienes de hasta 8 millones, es voluntario el primer año (disposición transitoria tercera).</li>
+        </ul>
+
+        <h2>Cómo se envía</h2>
+        <p>Hay tres maneras: por una plataforma privada de intercambio, por la solución pública de la AEAT o combinando las dos. Si no usas la solución pública, tu plataforma manda además a la AEAT una copia de cada factura en UBL. Si un cliente no ha acordado una plataforma con su proveedor, recibe sus facturas por la solución pública (arts. 5 y 6).</p>
+
+        <h2>¿Y VERI*FACTU llega a la vez?</h2>
+        <p>El 5 de octubre de 2026, Hacienda anunció que quiere retrasar VERI*FACTU a octubre de 2028, para que coincida con la factura electrónica de quien factura hasta 8 millones. Mientras no salga en el BOE, VERI*FACTU sigue en 2027: lo tienes en <a href="que-es-verifactu.html">Qué es VERI*FACTU y a quién obliga</a>.</p>
+
+        <h2>En VeriFree</h2>
+        <p>Hoy VeriFree hace cada factura también en UBL, con los campos de la Orden HAC/1028/2026, firmada con tu certificado, y puede firmar el PDF. Las manda por correo a tu cliente. No las envía a la solución pública de la AEAT ni a una plataforma. Más detalle, en <a href="caracteristicas.html">Características</a>.</p>
+
+        <h2>Fuentes</h2>
+        <ul>
+          <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-22440" target="_blank" rel="noopener">Ley 56/2007 (BOE)</a>: artículo 2 bis, la factura electrónica obligatoria.</li>
+          <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-7295" target="_blank" rel="noopener">Real Decreto 238/2026 (BOE)</a>: artículos 2 a 7 y 10, disposiciones transitorias segunda y tercera, y disposición final cuarta.</li>
+          <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-20587" target="_blank" rel="noopener">Orden HAC/1028/2026 (BOE)</a>: la solución pública de la AEAT y su entrada en vigor.</li>
+          <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2012-14696" target="_blank" rel="noopener">Real Decreto 1619/2012 (BOE)</a>: artículo 9, qué es una factura electrónica.</li>
+          <li><a href="https://www.hacienda.gob.es/sgt/gabsehacienda/nota-informativa-verifactu.pdf" target="_blank" rel="noopener">Nota del Ministerio de Hacienda del 5 de octubre de 2026</a>.</li>
+        </ul>
+        <div class="prueba">
+          <div>
+            <h3>VeriFree</h3>
+            <p>Es un programa de facturación VERI*FACTU para Windows, con tus datos en tu ordenador. Cuesta 119 € + IVA con el primer año de actualizaciones y soporte, y después 69 € + IVA al año para seguir al día. Puedes probarlo gratis, completo y sin límite de tiempo, antes de pagar.</p>
+          </div>
+          <a class="btn btn-primario" href="descargas.html">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Probar gratis</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="marco">
+    <div class="pie-rejilla">
+      <div class="pie-col">
+        <div class="marca">
+          <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
+          VeriFree <span>Facturación</span>
+        </div>
+        <p>Software de facturación para Windows adaptado al Reglamento VERI*FACTU. Con el código público, para que cualquiera pueda comprobar qué hace.</p>
+      </div>
+
+      <div class="pie-col">
+        <h5>Navegación</h5>
+        <ul class="pie-enlaces">
+          <li><a href="caracteristicas.html">Características</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="garantia.html">Garantía legal</a></li>
+          <li><a href="preguntas.html">Preguntas</a></li>
+          <li><a href="guias.html">Guías</a></li>
+          <li><a href="manual.html">Manual de uso</a></li>
+          <li><a href="descargas.html">Descargas</a></li>
+          <li><a href="compilalo.html">Compílalo tú</a></li>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="https://github.com/verifree/verifree" target="_blank" rel="noopener">Código en GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="pie-col">
+        <h5>Sede y titularidad legal</h5>
+        <ul class="pie-contacto">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 21V3h6v18"/></svg>
+            <span><strong>VeriFree, S.L.</strong></span>
+          </li>
+          <li class="pie-cif">
+            <span></span>
+            <span>NIF B05821780 · Inscrita en el Registro Mercantil de Alicante, hoja A-208993, inscripción 1.ª</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>C/ Reyes Católicos, 24, 1º Izq. · 03003 Alicante</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Tel. <a href="tel:+34965134033">965 13 40 33</a> · <a href="tel:+34686600299">686 60 02 99</a></span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:contacto@verifree.es">contacto@verifree.es</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pie-legal">
+      <span>© 2026 VeriFree, S.L. Todos los derechos reservados. Información general en cumplimiento del art. 10 de la Ley 34/2002 (LSSI-CE).</span>
+      <span>Web 100% privada: sin cookies y sin rastreo. <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="condiciones.html">Condiciones de compra</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="verifree.js" defer></script>
+</body>
+</html>
