@@ -190,7 +190,7 @@
         <p>Con una factura elegida (al pie de la tabla y en el menú del botón derecho):</p>
         <dl>
           <dt>Ver</dt>
-          <dd>La factura en PDF, con el QR tributario. Desde el visor se imprime o se guarda. También se abre con doble clic en la factura. Si la factura se ha corregido, el visor lo dice en una franja, con un botón para ver la que vale ahora.</dd>
+          <dd>La factura en PDF, con el QR tributario. Desde el visor se imprime o se guarda. También se abre con doble clic en la factura. Si la factura se ha corregido, el visor lo dice en una franja, con un botón para ver la que vale ahora. Si está anulada, la franja dice desde cuándo, y <strong>Ver como se emitió</strong> te la enseña tal como salió, sin la marca de anulada: puedes guardar las dos, por ejemplo para tu contabilidad.</dd>
           <dt>Enviar por email…</dt>
           <dd>Ver <a href="#email">Enviar por email</a>.</dd>
           <dt>Guardar firmada</dt>
@@ -200,7 +200,7 @@
           <dt>Rectificar</dt>
           <dd>Abre un borrador con la factura tal como está: corrígela y elige en <strong>Cómo se emite</strong> si va por sustitución o por diferencias (cada forma dice cuándo conviene). Por sustitución se emite la factura entera, corregida. Por diferencias, los conceptos pasan a ser solo lo que cambia, que es lo que se emite: una fila por concepto de la factura (en gris, los que no cambian), con «Abono» o «Cargo» según reste o sume; lo que se devuelve o se descuenta lleva el precio en negativo. Las facturas emitidas con otro programa se rectifican con ese programa.</dd>
           <dt>Anular…</dt>
-          <dd>Anula una factura que no debió emitirse. La anulación también se envía a la AEAT.</dd>
+          <dd>Anula una factura que no debió emitirse, sobre todo si el cliente aún no la tiene. La anulación también se envía a la AEAT. Si la factura es de un trimestre anterior, deja de contar en él: si ya lo declaraste, hay que corregir esa declaración.</dd>
           <dt>Volver a enviar a la AEAT…</dt>
           <dd>Para una factura que la AEAT rechazó, cuando la causa ya está resuelta. Ver <a href="#aeat">Envío a la AEAT</a>.</dd>
         </dl>
@@ -245,7 +245,7 @@
         <h2>10. Factura electrónica</h2>
         <p>Cada factura emitida tiene su factura electrónica en el formato de la AEAT (UBL), firmada justo después de emitirla con el certificado de la empresa o el de su representante (con el de otra persona, la factura figuraría expedida por ella). Lleva la dirección del QR, con la que quien la recibe comprueba en la AEAT que está registrada.</p>
         <p>Si no se puede firmar, se sigue facturando y una banda lo avisa. <strong>Firmar ahora</strong>, en <strong>Configuración › Factura electrónica</strong>, firma lo pendiente sin esperar al próximo intento.</p>
-        <p>Ahí mismo puedes guardar una copia de cada factura firmada en una carpeta de archivo, por año y mes. La predeterminada está dentro de la carpeta de la empresa, así que entra en la copia de seguridad; también puedes elegir otra, por ejemplo una que compartas con tu asesoría.</p>
+        <p>Ahí mismo puedes guardar una copia de cada factura firmada en una carpeta de archivo, por año y mes. La predeterminada está dentro de la carpeta de la empresa, así que entra en la copia de seguridad; también puedes elegir otra, por ejemplo una que compartas con tu asesoría. Las copias de las facturas anuladas van aparte, en la carpeta «Anuladas» de su mes.</p>
         <h3>Guardar firmada</h3>
         <p>En <strong>Facturas</strong>, <strong>Guardar firmada</strong> ofrece dos cosas: <strong>Factura electrónica (XML)…</strong> guarda la factura electrónica firmada, para enviarla al cliente; <strong>PDF firmado…</strong> guarda el PDF de la factura firmado con el certificado de la empresa, que prueba quién la expidió y que no se ha cambiado. El PDF firmado no se guarda en el programa: se firma cada vez que lo pides.</p>
       </section>
@@ -269,7 +269,7 @@
           <img src="capturas/recurrentes.png" alt="Pantalla Recurrentes con cada recurrente y su última factura" width="1920" height="1140" loading="lazy">
           <figcaption>Datos de ejemplo.</figcaption>
         </figure>
-        <p>La lista no tiene calendario: nada viene marcado, y cada recurrente dice cuándo salió su última factura. Marca las que quieres facturar; <strong>Ver el listado</strong> te las enseña en PDF antes de emitirlas, y <strong>Emitir marcadas…</strong> las emite todas de una vez.</p>
+        <p>La lista no tiene calendario: nada viene marcado, y cada recurrente dice cuándo salió su última factura y si se anuló. Marca las que quieres facturar; <strong>Ver el listado</strong> te las enseña en PDF antes de emitirlas, y <strong>Emitir marcadas…</strong> las emite todas de una vez.</p>
         <p><strong>Retocar…</strong> cambia algo solo en la próxima factura de una recurrente (un concepto de más, otro precio), sin tocar las siguientes; se emite después desde la lista, con las demás. <strong>Quitar el retoque…</strong> la deja otra vez como la recurrente. Para cambiar todas las facturas que se emitan desde ahora, abre la recurrente y cámbiala. No hay pausa ni fecha de fin: si una deja de hacer falta, <strong>Borrar…</strong> la quita, y las facturas ya emitidas no cambian.</p>
       </section>
 
