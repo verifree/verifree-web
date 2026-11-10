@@ -905,7 +905,9 @@ summary::-webkit-details-marker {
   box-shadow: 0 0 0 4px rgba(255, 122, 26, 0.2);
 }
 
-.es-cero .coste-barra {
+/* Un solo valor, no un rango: un punto en su sitio (0 €, o el coste fijo de la licencia) */
+.es-cero .coste-barra,
+.es-punto .coste-barra {
   top: calc(50% - 0.45rem);
   bottom: auto;
   width: 0.9rem;
@@ -2936,7 +2938,8 @@ p.aviso {
     border-radius: 999px;
   }
 
-  .es-cero .coste-barra {
+  .es-cero .coste-barra,
+  .es-punto .coste-barra {
     top: 0;
     width: 0.625rem;
     height: 100%;
