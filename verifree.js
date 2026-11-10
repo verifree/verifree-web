@@ -81,18 +81,23 @@
     if (e.key === 'Escape') cerrarGrupos(null);
   });
 
-  /* Explorador de funciones: clic, avance automático y pausa al pasar el ratón */
+  /* Explorador de funciones: clic, avance automático y pausa al pasar el ratón. La que lleva vídeo dura lo que él
+     (data-duracion, en segundos) y su vídeo empieza desde el principio al elegirla. */
   var explorador = document.querySelector('.explorador');
   if (explorador) {
     var opciones = [].slice.call(explorador.querySelectorAll('.explorador-opcion'));
     var temporizador;
+    var segundos = function (o) { return parseFloat(o.getAttribute('data-duracion')) || 6; };
+    opciones.forEach(function (o) {
+      if (o.hasAttribute('data-duracion')) o.style.setProperty('--duracion', segundos(o) + 's');
+    });
     var programar = function () {
       clearTimeout(temporizador);
       if (sinMovimiento) return;
+      var i = opciones.findIndex(function (o) { return o.classList.contains('activo'); });
       temporizador = setTimeout(function () {
-        var i = opciones.findIndex(function (o) { return o.classList.contains('activo'); });
         opciones[(i + 1) % opciones.length].click();
-      }, 6000);
+      }, segundos(opciones[i]) * 1000);
     };
     opciones.forEach(function (opcion) {
       opcion.addEventListener('click', function () {
@@ -101,7 +106,12 @@
           o.classList.toggle('activo', activa);
           o.setAttribute('aria-selected', activa ? 'true' : 'false');
           var panel = document.getElementById(o.getAttribute('aria-controls'));
-          if (panel) panel.classList.toggle('activo', activa);
+          if (panel) {
+            panel.classList.toggle('activo', activa);
+            var video = panel.querySelector('video');
+            if (video && activa) { video.currentTime = 0; video.play().catch(function () {}); }
+            else if (video) video.pause();
+          }
         });
         programar();
       });

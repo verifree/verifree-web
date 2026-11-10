@@ -1134,7 +1134,8 @@ summary::-webkit-details-marker {
   visibility: visible;
 }
 
-.explorador-panel img {
+.explorador-panel img,
+.explorador-panel video {
   width: 100%;
   height: auto;
   aspect-ratio: 1920 / 1140;
@@ -1155,6 +1156,13 @@ summary::-webkit-details-marker {
 .explorador-panel p {
   margin: 0.85rem 0.5rem 0.5rem;
   line-height: 1.6;
+}
+
+.explorador-panel .explorador-pie {
+  margin: 0.6rem 0.5rem 0;
+  color: var(--tinta-3);
+  font-size: 0.8125rem;
+  line-height: 1.4;
 }
 
 .explorador-nota {
@@ -2484,7 +2492,7 @@ p.aviso {
 
   /* Explorador */
   .explorador-opcion.activo::after {
-    animation: avance 6s linear forwards;
+    animation: avance var(--duracion, 6s) linear forwards;
   }
 
   .explorador.pausado .explorador-opcion.activo::after {
