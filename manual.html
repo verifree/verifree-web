@@ -38,13 +38,13 @@
           <a href="preguntas.html">Preguntas</a>
           <a href="guias.html">Guías</a>
           <a href="manual.html" aria-current="page">Manual</a>
-          <a href="descargas.html">Descargas</a>
+          <a href="instalar.html">Instalar</a>
         </div>
       </div>
       <a href="contacto.html">Contacto</a>
     </nav>
     <div class="cabecera-acciones">
-      <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/verifree/verifree-web/releases/latest/download/VeriFree-instalador.exe" download>
+      <a class="btn btn-primario btn-sm cabecera-accion" href="demostracion.html">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Probar gratis
       </a>
@@ -85,14 +85,14 @@
 
       <section id="instalar">
         <h2>1. Instalar</h2>
-        <p>VeriFree se instala con su instalador, <span class="ruta">VeriFree-instalador.exe</span> (puedes <a href="https://github.com/verifree/verifree-web/releases/latest/download/VeriFree-instalador.exe" download>descargarlo aquí</a>). Es el mismo programa para probarlo y para facturar de verdad: la licencia se carga después, en el programa. Funciona en Windows 10 u 11 de 64 bits y lleva dentro todo lo que necesita. Para instalarlo:</p>
+        <p>VeriFree se instala con su instalador, <span class="ruta">VeriFree-instalador.exe</span>, que se descarga en la página <a href="instalar.html">Instalar</a>. La licencia se carga después, en el programa. Funciona en Windows 10 u 11 de 64 bits y lleva dentro todo lo que necesita. Para instalarlo:</p>
         <ol>
           <li>Abre <span class="ruta">VeriFree-instalador.exe</span>. Si Windows SmartScreen muestra un aviso, pulsa <strong>Más información</strong> y después <strong>Ejecutar de todas formas</strong>.</li>
           <li>Windows te pregunta si permites que haga cambios en el equipo: pulsa <strong>Sí</strong>. VeriFree se instala en «Archivos de programa», para todos los usuarios del equipo.</li>
           <li>Elige si quieres tenerlo también en el escritorio y pulsa <strong>Siguiente</strong>. Al pulsar <strong>Finalizar</strong> se abre, y desde entonces lo tienes en el menú Inicio.</li>
         </ol>
         <p>Tus datos se guardan aparte del programa, en la carpeta VeriFree de tu usuario de Windows (<span class="ruta">C:\Users\&lt;tu usuario&gt;\VeriFree</span>), con una carpeta por empresa. Cada usuario de Windows tiene los suyos. Dónde están te lo dice <strong>Acerca de › Sus datos</strong>.</p>
-        <p>Para comprobar que el instalador es el original, mira <a href="descargas.html">Descargas</a>.</p>
+        <p>Para comprobar que el instalador es el original, mira la página <a href="instalar.html">Instalar</a>.</p>
         <h3>Cómo actualizar a una nueva versión</h3>
         <p>VeriFree mira si hay una versión nueva al abrirse, como mucho una vez al día y sin enviar ningún dato tuyo, y si la hay te lo dice encima de la pantalla; si no quieres, quita la casilla en <strong>Acerca de</strong>. Allí, <strong>Buscar actualizaciones</strong> lo consulta en el momento. Si la hay, te dice qué trae y, al pulsar <strong>Actualizar</strong>, la descarga y la instala: antes guarda una copia de tus datos, Windows te pide permiso y el programa se vuelve a abrir con la versión nueva. Si tu licencia no cubre esa versión, te ofrece renovarla.</p>
         <p>También puedes hacerlo a mano: descarga el instalador de la versión nueva y ábrelo. Si VeriFree está abierto, lo cierra antes (si tienes algo sin guardar, te pide que lo cierres tú). Si tu licencia no cubre esa versión, te lo explica y no instala nada. Tus datos no se tocan. La versión que tienes se ve en <strong>Acerca de</strong>.</p>
@@ -102,10 +102,10 @@
 
       <section id="empresa">
         <h2>2. Crear la empresa</h2>
-        <p>La primera vez, el programa pide los datos fiscales de la empresa: el NIF, el nombre (o el nombre y los apellidos, si eres persona física) y el domicilio (dirección, código postal, población, provincia y país). Debajo, si quieres, el IBAN, que se imprime en las facturas por transferencia, y el móvil de Bizum, que se imprime en las facturas por Bizum. Pulsa <strong>Crear la empresa</strong> y ya puedes facturar.</p>
-        <p>Toda empresa empieza en el modo de pruebas, y arriba se ve la etiqueta <strong>PRUEBAS</strong>: puedes probarlo todo con tus datos, y las facturas llevan su propia numeración, con «PRU-» delante, y no tienen validez. Cuando quieras facturar de verdad, activa VERI*FACTU (ver <a href="#produccion">Activar VERI*FACTU</a>).</p>
+        <p>La primera vez, el programa pide los datos fiscales de la empresa: el NIF, el nombre (o el nombre y los apellidos, si eres persona física) y el domicilio (dirección, código postal, población, provincia y país). Debajo, si quieres, el IBAN, que se imprime en las facturas por transferencia, y el móvil de Bizum, que se imprime en las facturas por Bizum. Pulsa <strong>Crear la empresa</strong>.</p>
+        <p>Hasta que cargues su Licencia Oficial, arriba se ve la etiqueta <strong>SIN LICENCIA</strong>: puedes prepararlo todo (clientes, borradores, presupuestos y proformas), pero no emitir facturas. El NIF de la empresa tiene que ser el de la licencia. Ver <a href="#licencia">La licencia y la primera factura</a>.</p>
         <h3>Varias empresas</h3>
-        <p>Arriba a la izquierda está el nombre de la empresa abierta. Púlsalo para cambiar a otra o elige <strong>Crear una empresa nueva…</strong>. Cada empresa tiene sus facturas, sus clientes, su numeración y su configuración por separado, empieza en el modo de pruebas y activa VERI*FACTU por su cuenta.</p>
+        <p>Arriba a la izquierda está el nombre de la empresa abierta. Púlsalo para cambiar a otra o elige <strong>Crear una empresa nueva…</strong>. Cada empresa tiene sus facturas, sus clientes, su numeración y su configuración por separado, y necesita su propia Licencia Oficial.</p>
       </section>
 
       <section id="configuracion">
@@ -121,7 +121,7 @@
           <dt>Series</dt>
           <dd>La serie A para las facturas y la R para las rectificativas, con una numeración que empieza cada año (A-2026-0001). Puedes crear otras y cambiar su descripción; el código y la numeración no se cambian, porque forman parte de los números de las facturas.</dd>
           <dt>VERI*FACTU</dt>
-          <dd>Si la empresa está en el modo de pruebas o tiene VERI*FACTU activado, su Licencia Oficial, el certificado con el que se envía, el paso de activar VERI*FACTU, cómo va el envío y los datos del productor del programa. Ver <a href="#aeat">Envío a la AEAT</a>.</dd>
+          <dd>La Licencia Oficial de la empresa, el certificado con el que se envía, cómo va el envío y los datos del productor del programa. Ver <a href="#aeat">Envío a la AEAT</a>.</dd>
           <dt>Factura electrónica</dt>
           <dd>La firma de las facturas electrónicas y la carpeta donde se guarda una copia. Ver <a href="#electronica">Factura electrónica</a>.</dd>
         </dl>
@@ -142,13 +142,13 @@
         <p><strong>Guardar en Borradores</strong> la deja en Borradores, para terminarla o emitirla más tarde. No hay botón Cancelar: sales con el enlace de arriba, que vuelve a la pantalla de la que viniste (<strong>← Borradores</strong>, por ejemplo) y te pregunta si hay cambios sin guardar; <strong>Descartar…</strong> la deja sin guardar. Una factura nueva no existe hasta que la guardas o la emites.</p>
         <p><strong>Vista previa</strong> muestra el PDF del borrador con la marca de agua «BORRADOR»: es un documento interno, no una factura ni una proforma. Para dar al cliente algo antes de facturar, haz un <a href="#presupuestos">presupuesto o una factura proforma</a>.</p>
         <h3>Emitir</h3>
-        <p>Al pulsar <strong>Emitir…</strong> y confirmar, la factura se emite con la fecha de hoy y el siguiente número de la serie (en el modo de pruebas, con «PRU-» delante). Después no se puede modificar: si hubiera algún error, se corrige con una factura rectificativa.</p>
+        <p>Al pulsar <strong>Emitir…</strong> y confirmar, la factura se emite con la fecha de hoy y el siguiente número de la serie. Después no se puede modificar: si hubiera algún error, se corrige con una factura rectificativa.</p>
         <p>En la lista de borradores puedes marcar varios y emitirlos de una vez con <strong>Emitir marcados…</strong> (solo se emiten los que estén listos) o borrarlos con <strong>Borrar marcados…</strong>. <strong>Duplicar</strong> crea una copia de un borrador.</p>
       </section>
 
       <section id="presupuestos">
         <h2>5. Presupuestos y facturas proforma</h2>
-        <p>En <strong>Presupuestos</strong> haces lo que ofreces al cliente antes de facturar. <strong>Nuevo presupuesto</strong> abre el mismo editor que una factura; arriba eliges si se saca como <strong>Presupuesto</strong> o como <strong>Factura proforma</strong>. Hasta cuándo es válido (de entrada, 30 días) y, en la proforma, el vencimiento en días salen en resumen, con <strong>Corregir</strong>. Los presupuestos y las proformas son de verdad también en el modo de pruebas: puedes mandarlos a tus clientes sin licencia.</p>
+        <p>En <strong>Presupuestos</strong> haces lo que ofreces al cliente antes de facturar. <strong>Nuevo presupuesto</strong> abre el mismo editor que una factura; arriba eliges si se saca como <strong>Presupuesto</strong> o como <strong>Factura proforma</strong>. Hasta cuándo es válido (de entrada, 30 días) y, en la proforma, el vencimiento en días salen en resumen, con <strong>Corregir</strong>. Los presupuestos y las proformas no necesitan licencia: puedes mandarlos a tus clientes aunque aún no la tengas.</p>
         <ul>
           <li>Recibe su número al guardarlo (P-2026-0001) y desde entonces no se puede borrar, como indica la AEAT; se puede cambiar hasta facturarlo. <strong>Ver</strong> y <strong>Enviar por email</strong> lo guardan antes, para que salga ya con su número.</li>
           <li><strong>Respuesta ▾</strong> anota si el cliente lo ha aceptado o lo ha rechazado. Uno aceptado no caduca.</li>
@@ -221,15 +221,15 @@
 
       <section id="aeat">
         <h2>9. Envío a la AEAT</h2>
-        <p>Con VERI*FACTU activado, cada factura y cada anulación se envían solas a la AEAT al emitirlas. Si no hay conexión, el programa lo vuelve a intentar solo y, mientras falte algo, lo avisa una banda arriba con un botón para resolverlo.</p>
-        <h3 id="produccion">Activar VERI*FACTU</h3>
-        <p>Cada empresa empieza en el modo de pruebas: sus facturas llevan «PRU-» delante del número y la banda «Modo de pruebas», no tienen validez y no se envían a la AEAT. Para facturar de verdad, activa VERI*FACTU en <strong>Configuración › VERI*FACTU</strong>, en tres pasos:</p>
+        <p>Cada factura y cada anulación se envían solas a la AEAT al emitirlas. Si no hay conexión, el programa lo vuelve a intentar solo y, mientras falte algo, lo avisa una banda arriba con un botón para resolverlo.</p>
+        <h3 id="licencia">La licencia y la primera factura</h3>
+        <p>Para emitir facturas, cada empresa necesita su Licencia Oficial. Son tres pasos:</p>
         <ol>
-          <li>Carga la Licencia Oficial de la empresa con <strong>Cargar licencia…</strong>: es el archivo que recibes al comprarla, con el NIF de la empresa. Si aún no la tienes, <strong>Comprar licencia</strong> abre la página donde se compra.</li>
-          <li>Elige el certificado con el que se envía (ver <a href="#certificado">El certificado</a>) y, si quieres, comprueba con <strong>Probar conexión</strong> que llega a la AEAT y tiene poder para esta empresa.</li>
-          <li>Pulsa <strong>Activar VERI*FACTU…</strong>. El programa comprueba el certificado con la AEAT y, si falta algo, te dice qué. Si todo está bien, te pide que confirmes, marcando la casilla, que desde entonces facturas de verdad.</li>
+          <li>En <strong>Configuración › VERI*FACTU</strong>, carga la Licencia Oficial de la empresa con <strong>Cargar licencia…</strong>: es el archivo que recibes al comprarla, con el NIF de la empresa. Si aún no la tienes, <strong>Comprar licencia</strong> abre la página donde se compra.</li>
+          <li>En la misma pestaña, elige el certificado con el que se envía (ver <a href="#certificado">El certificado</a>) y, si quieres, comprueba con <strong>Probar conexión</strong> que llega a la AEAT y tiene poder para esta empresa.</li>
+          <li>Emite la primera factura. Antes, el programa comprueba el certificado con la AEAT y, si falta algo, te dice qué. Si todo está bien, te pide que confirmes, marcando la casilla, que desde entonces cada factura y cada anulación de esa empresa se envían a la AEAT.</li>
         </ol>
-        <p>No se puede desactivar: desde entonces, cada factura queda registrada en la AEAT con validez legal, y cada serie empieza en el 1. Las facturas de prueba se conservan con su numeración, pero no cuentan en los totales ni en el libro registro y no se anulan ni se rectifican. La licencia se guarda en la carpeta <span class="ruta">Empresas</span>, así que entra en la copia de seguridad. Cada empresa se activa por su cuenta, aunque otra ya tenga VERI*FACTU activado.</p>
+        <p>No se puede desactivar: desde entonces, cada factura queda registrada en la AEAT con validez legal. La licencia se guarda en la carpeta <span class="ruta">Empresas</span>, así que entra en la copia de seguridad. Cada empresa carga su licencia y lo confirma por su cuenta.</p>
         <h3 id="certificado">El certificado</h3>
         <p>En <strong>Configuración › VERI*FACTU</strong>, elige el certificado con el que se envía: el de la empresa o el de quien tenga poder para enviar por ella (apoderado o colaborador social). El programa lista los certificados instalados en Windows que sirven para conectar con la AEAT; si el tuyo está en un archivo, usa <strong>Importar archivo .pfx / .p12…</strong>. Si no sabes qué certificado necesitas, lo tienes en <a href="preguntas.html#que-certificado">Preguntas</a>.</p>
         <p>El certificado se queda en Windows: en la carpeta de la empresa no se guarda ni el certificado ni su contraseña. Por eso, en otro equipo hay que volver a instalarlo. Desde un mes antes de que caduque, una banda lo avisa: renuévalo y elige el nuevo aquí.</p>
@@ -297,7 +297,7 @@
         <ul>
           <li><strong>Hacer una copia de seguridad…</strong> guarda en un solo archivo todas tus empresas, con sus facturas electrónicas, donde elijas: un disco externo, una memoria USB o tu nube. No hace falta cerrar el programa. Si pasa un mes sin hacerla, una banda arriba te lo recuerda.</li>
           <li><strong>Restaurar una copia…</strong> recupera tus empresas desde una copia, una a una: añade las que no tienes en este equipo y pone al día las que en la copia son más recientes; las demás se quedan como están. Si en alguna la copia es más antigua que tus datos, solo vuelve a ella si lo marcas: las facturas posteriores ya están en la AEAT, y volver a emitir sus números daría error. Antes de cambiar nada guarda una copia de los datos de ahora, por si acaso.</li>
-          <li><strong>Borrar esta empresa…</strong>, al final de Configuración › Empresa, la quita de este equipo. Si tiene VERI*FACTU activado, antes guarda sus datos en un archivo con solo esa empresa: es lo que se entrega si dejas de llevarla, y con él se recupera.</li>
+          <li><strong>Borrar esta empresa…</strong>, al final de Configuración › Empresa, la quita de este equipo. Si tiene facturas o presupuestos, antes guarda sus datos en un archivo con solo esa empresa: es lo que se entrega si dejas de llevarla, y con él se recupera.</li>
         </ul>
         <p>Para pasar a un equipo nuevo: haz una copia, instala VeriFree en el equipo nuevo y, al abrirlo, pulsa <strong>Restaurar una copia…</strong> en Crear empresa. Después instala tu certificado digital y, si envías los emails desde VeriFree, vuelve a escribir la contraseña del correo. Por seguridad, ni el certificado ni esa contraseña van en la copia.</p>
 
@@ -332,7 +332,7 @@
           <li><a href="preguntas.html">Preguntas</a></li>
           <li><a href="guias.html">Guías</a></li>
           <li><a href="manual.html">Manual de uso</a></li>
-          <li><a href="descargas.html">Descargas</a></li>
+          <li><a href="instalar.html">Instalar</a></li>
           <li><a href="compilalo.html">Compílalo tú</a></li>
           <li><a href="nosotros.html">Quiénes somos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
