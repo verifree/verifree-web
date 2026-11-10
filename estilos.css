@@ -2601,7 +2601,7 @@ p.aviso {
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1100px) {
   .cabecera .marco {
     display: flex;
     justify-content: space-between;
