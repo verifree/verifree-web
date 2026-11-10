@@ -1497,6 +1497,22 @@ summary::-webkit-details-marker {
   width: 100%;
 }
 
+/* Botones al pie de una columna, todos del mismo ancho y centrados */
+.plan > .acciones {
+  grid-row: 6;
+  align-self: end;
+  justify-content: center;
+}
+
+.plan > .acciones .btn {
+  width: 15.5rem;
+  max-width: 100%;
+}
+
+.plan-iva a {
+  color: inherit;
+}
+
 /* Botón de compra de los servicios */
 .precio-botones {
   margin-top: 1.25rem;
@@ -2585,7 +2601,7 @@ p.aviso {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
   .cabecera .marco {
     display: flex;
     justify-content: space-between;
