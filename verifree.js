@@ -158,6 +158,33 @@
     });
   });
 
+  /* Mientras no hay versión firmada, los botones de descarga abren el aviso «Todavía no se puede descargar» */
+  var sinDescarga = document.getElementById('sin-descarga');
+  if (sinDescarga && sinDescarga.showModal) {
+    document.querySelectorAll('[data-sin-descarga]').forEach(function (boton) {
+      boton.addEventListener('click', function (e) {
+        e.preventDefault();
+        sinDescarga.showModal();
+      });
+    });
+    sinDescarga.querySelector('.ventana-cerrar').addEventListener('click', function () { sinDescarga.close(); });
+    // Un clic fuera del recuadro (en el fondo oscuro) también la cierra
+    sinDescarga.addEventListener('click', function (e) {
+      if (e.target === sinDescarga) sinDescarga.close();
+    });
+    var copiar = sinDescarga.querySelector('.ventana-copiar');
+    if (copiar && navigator.clipboard) {
+      copiar.addEventListener('click', function () {
+        navigator.clipboard.writeText(copiar.getAttribute('data-copiar')).then(function () {
+          copiar.textContent = 'Copiada';
+          setTimeout(function () { copiar.textContent = 'Copiar'; }, 2000);
+        });
+      });
+    } else if (copiar) {
+      copiar.hidden = true;
+    }
+  }
+
   if (!hayObservador) return;
 
   /* Gráfico de costes: las barras crecen al llegar */

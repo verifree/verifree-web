@@ -2428,6 +2428,98 @@ p.aviso {
   z-index: 1;
 }
 
+/* Ventana «Todavía no se puede descargar» (Descargar) */
+.ventana {
+  width: min(34rem, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radio-panel);
+  background: var(--blanco);
+  color: var(--tinta);
+  box-shadow: var(--sombra-captura);
+}
+
+.ventana::backdrop {
+  background: rgba(11, 11, 12, 0.55);
+}
+
+.ventana-cuerpo {
+  position: relative;
+  padding: clamp(1.5rem, 5vw, 2.25rem);
+}
+
+.ventana h2 {
+  margin-right: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.ventana p {
+  margin-top: 0.85rem;
+  color: var(--tinta-2);
+  font-size: 1rem;
+}
+
+.ventana .acciones {
+  margin-top: 1.25rem;
+}
+
+.ventana a:not(.btn) {
+  color: var(--enlace);
+}
+
+.ventana-cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--tinta-3);
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ventana-cerrar:hover {
+  background: var(--crema-2);
+  color: var(--tinta);
+}
+
+.ventana-nota {
+  font-size: 0.9375rem;
+}
+
+.ventana-copiar {
+  margin-left: 0.25rem;
+  padding: 0.1rem 0.65rem;
+  border: 1px solid var(--borde-control);
+  border-radius: var(--radio-control);
+  background: transparent;
+  color: var(--tinta);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ventana-copiar:hover {
+  border-color: var(--tinta);
+}
+
+.ventana-pie {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--borde);
+  font-size: 0.9375rem;
+}
+
 /* 15. Movimiento ========================================================== */
 @media (prefers-reduced-motion: no-preference) {
   .portada {
