@@ -672,6 +672,11 @@ summary::-webkit-details-marker {
   line-height: 1.55;
 }
 
+/* En la portada, el naranja es para VERI*FACTU y los botones: el enlace, solo subrayado */
+.subtitulo a {
+  color: inherit;
+}
+
 .portada .acciones {
   justify-content: center;
   margin-top: 2.25rem;
