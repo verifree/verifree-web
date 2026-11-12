@@ -2344,7 +2344,7 @@ summary::-webkit-details-marker {
 
 /* Captura de otra web dentro de un paso de una guía: con marco y aire alrededor, para que no se confunda con el texto */
 .texto li > .captura {
-  margin: 1.25rem 0 2.25rem;
+  margin: 2.25rem 0;
   padding: 0.75rem;
   background: var(--crema-2);
   border: 1px solid var(--borde);
