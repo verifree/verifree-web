@@ -499,6 +499,11 @@ summary::-webkit-details-marker {
   transform: translateX(3px);
 }
 
+/* El icono de WhatsApp, en su verde */
+.btn-whatsapp svg {
+  fill: #25d366;
+}
+
 .acciones {
   display: flex;
   flex-wrap: wrap;
@@ -1730,8 +1735,23 @@ summary::-webkit-details-marker {
   font-size: 1rem;
 }
 
-.faq .seccion-cabecera .acciones {
-  margin-top: 1.5rem;
+/* Bocadillo de chat que lleva a WhatsApp */
+.bocadillo {
+  max-width: 24rem;
+  margin-top: 1.75rem;
+  padding: 1rem 1.1rem 1.1rem;
+  background: var(--blanco);
+  border-radius: 16px 16px 16px 4px;
+  box-shadow: 0 0 0 1px var(--borde), 0 10px 30px -14px rgba(60, 40, 20, 0.35);
+}
+
+.bocadillo p {
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.bocadillo .btn {
+  margin-top: 0.85rem;
 }
 
 .faq-lista {
