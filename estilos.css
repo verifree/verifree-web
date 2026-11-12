@@ -2342,6 +2342,24 @@ summary::-webkit-details-marker {
   font-size: 0.8125rem;
 }
 
+/* Captura de otra web dentro de un paso de una guía: con marco y aire alrededor, para que no se confunda con el texto */
+.texto li > .captura {
+  margin: 1.25rem 0 2.25rem;
+  padding: 0.75rem;
+  background: var(--crema-2);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+}
+
+.texto li > .captura img {
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px var(--borde-2);
+}
+
+.texto li > .captura figcaption {
+  margin: 0.6rem 0.25rem 0;
+}
+
 kbd, .ruta {
   padding: 0.08em 0.38em;
   background: var(--crema-2);
