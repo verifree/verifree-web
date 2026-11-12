@@ -10,7 +10,7 @@
    3. Utilidades de maquetación 10. Capturas
    4. Cabecera                  11. Precios
    5. Botones y controles       12. Garantía legal, sello y paneles
-   6. Portada y mascota         13. Preguntas, cierre y pie
+   6. Portada                   13. Preguntas, cierre y pie
    7. Secciones y coste         14. Páginas interiores, tablas y manual
                                 15. Movimiento · 16. Adaptación
    ========================================================================== */
@@ -545,7 +545,7 @@ summary::-webkit-details-marker {
   color: var(--exito);
 }
 
-/* 6. Portada y mascota ==================================================== */
+/* 6. Portada ============================================================== */
 .portada,
 .pagina-cabecera {
   position: relative;
@@ -726,72 +726,6 @@ summary::-webkit-details-marker {
   border-radius: 14px;
   background: var(--blanco);
   box-shadow: var(--sombra-captura);
-}
-
-/* Veri, la mascota: un lince ibérico («ojos de lince»), que parpadea (mascota/veri.svg) */
-.veri {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.9rem;
-  width: fit-content;
-  max-width: 100%;
-  margin: 2rem auto 0;
-  color: inherit;
-  text-align: left;
-  text-decoration: none;
-}
-
-.veri img {
-  width: 96px;
-  height: 96px;
-  filter: drop-shadow(0 10px 14px rgba(60, 40, 20, 0.22));
-}
-
-.veri-bocadillo {
-  max-width: 24rem;
-  padding: 0.75rem 1rem;
-  background: var(--blanco);
-  border-radius: 16px 16px 16px 4px;
-  box-shadow: 0 0 0 1px rgba(11, 11, 12, 0.06), 0 10px 30px -14px rgba(60, 40, 20, 0.35);
-  color: #2b2b30;
-  font-size: 0.9375rem;
-  line-height: 1.45;
-}
-
-.veri-bocadillo strong {
-  color: var(--negro);
-}
-
-.veri-centro {
-  margin-bottom: 2.5rem;
-}
-
-.veri-izq {
-  justify-content: flex-start;
-  margin-left: 0;
-  margin-top: 1.75rem;
-}
-
-/* Veri abre WhatsApp con el móvil de atención: saluda al pasar el ratón */
-.veri img {
-  transform-origin: 50% 90%;
-}
-
-.veri:hover .veri-bocadillo {
-  box-shadow: 0 0 0 1px var(--naranja), 0 10px 30px -14px rgba(60, 40, 20, 0.35);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .veri:hover img {
-    animation: veri-saludo 0.7s ease-in-out;
-  }
-}
-
-@keyframes veri-saludo {
-  0%, 100% { transform: rotate(0); }
-  25% { transform: rotate(-8deg) translateY(-4px); }
-  60% { transform: rotate(6deg) translateY(-2px); }
 }
 
 /* 7. Secciones y coste ==================================================== */
@@ -1796,6 +1730,10 @@ summary::-webkit-details-marker {
   font-size: 1rem;
 }
 
+.faq .seccion-cabecera .acciones {
+  margin-top: 1.5rem;
+}
+
 .faq-lista {
   grid-column: 6 / span 7;
   border-bottom: 1px solid var(--borde);
@@ -2556,7 +2494,6 @@ p.aviso {
   }
 
   .portada .subtitulo,
-  .portada .veri,
   .portada .acciones,
   .portada .nota {
     animation: enfocar 0.6s var(--curva) 0.2s both;
@@ -2568,10 +2505,6 @@ p.aviso {
 
   .escenario {
     animation: enfocar 1.2s var(--curva) 1s both;
-  }
-
-  .veri-bocadillo {
-    animation: enfocar 0.8s var(--curva) both;
   }
 
   /* Gráfico: las barras crecen al llegar */
@@ -3078,15 +3011,6 @@ p.aviso {
     padding-right: 0;
   }
 
-  .veri {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .veri-bocadillo {
-    border-radius: 16px;
-  }
-
   .pie-legal {
     flex-direction: column;
   }
@@ -3129,7 +3053,6 @@ p.aviso {
 .comunidad p { margin-top: 0.4rem; font-size: 0.9375rem; }
 .manifiesto footer a { color: inherit; }
 .codigo-pasos .acciones { margin-top: 1.25rem; }
-.texto-pagina .veri { margin: 0 0 2rem; }
 
 /* Al imprimir una página (las condiciones de compra, por ejemplo), solo su contenido. */
 @media print {
